@@ -25,7 +25,12 @@ export function BottomSheet({ open, onClose, title, children, footer }: BottomSh
   return (
     <dialog
       ref={ref}
-      onClose={onClose}
+      // Solo Esc (cancel) y el clic afuera piden cerrar: el cierre programático no avisa,
+      // así abrir una hoja desde otra no las cierra a las dos.
+      onCancel={(e) => {
+        e.preventDefault();
+        onClose();
+      }}
       onClick={(e) => {
         if (e.target === ref.current) onClose();
       }}

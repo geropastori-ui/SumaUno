@@ -70,3 +70,58 @@ export async function searchMatches(args: SearchArgs): Promise<MatchListItem[]> 
   if (error) throw error;
   return data as unknown as MatchListItem[];
 }
+
+export type MatchDetail = MatchListItem & {
+  description: string | null;
+  created_at: string;
+  filled_at: string | null;
+};
+
+export type Participant = {
+  participant_id: string;
+  profile_id: string;
+  full_name: string;
+  avatar_url: string | null;
+  age: number | null;
+  level_rank: number | null;
+  level_name: string | null;
+  status: "pending" | "confirmed" | "rejected" | "cancelled";
+  out_of_level: boolean;
+  created_at: string;
+};
+
+export type Contact = { profile_id: string; full_name: string; whatsapp: string; is_organizer: boolean };
+
+export async function getMatchDetail(id: string) {
+  if (!/^[0-9a-f-]{36}$/i.test(id)) return null;
+  const supabase = await createClient();
+  const { data: match, error } = await supabase
+    .from("matches")
+    .select(`${MATCH_LIST_SELECT}, description, created_at, filled_at`)
+    .eq("id", id)
+    .maybeSingle();
+  if (error) throw error;
+  if (!match) return null;
+  const detail = match as unknown as MatchDetail;
+
+  const [participantsRes, organizerAgeRes, organizerLevelRes, contactsRes] = await Promise.all([
+    supabase.rpc("get_match_participants", { p_match_id: id }),
+    supabase.rpc("profile_age", { p_profile_id: detail.organizer_id }),
+    supabase
+      .from("player_sports")
+      .select("level_rank")
+      .eq("profile_id", detail.organizer_id)
+      .eq("sport_id", detail.sport_id)
+      .maybeSingle(),
+    supabase.rpc("get_match_contacts", { p_match_id: id }),
+  ]);
+  if (participantsRes.error) throw participantsRes.error;
+
+  return {
+    match: detail,
+    participants: participantsRes.data as Participant[],
+    organizerAge: organizerAgeRes.data ?? null,
+    organizerLevel: organizerLevelRes.data?.level_rank ?? null,
+    contacts: (contactsRes.data ?? []) as Contact[],
+  };
+}
