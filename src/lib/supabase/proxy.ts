@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { env } from "@/lib/env";
 import type { Database } from "@/types/database";
 
-const PUBLIC_PATHS = ["/login", "/registro", "/auth", "/offline", "/bienvenida"];
+const PUBLIC_PATHS = ["/login", "/registro", "/auth", "/offline"];
 
 function isPublic(pathname: string) {
   return (

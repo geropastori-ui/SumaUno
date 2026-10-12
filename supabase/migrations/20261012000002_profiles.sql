@@ -197,8 +197,6 @@ revoke insert, update, delete on public.profiles from authenticated;
 grant update (full_name, avatar_url, city_id) on public.profiles to authenticated;
 revoke insert, update, delete on public.profile_private from authenticated;
 grant update (birth_date, whatsapp) on public.profile_private to authenticated;
-revoke update on public.player_sports from authenticated;
-grant update (level_rank) on public.player_sports to authenticated;
 
 -- Administración del catálogo por la plataforma.
 create policy "catalogo: admin gestiona ciudades" on public.cities
