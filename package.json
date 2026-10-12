@@ -13,7 +13,8 @@
     "db:start": "supabase start",
     "db:reset": "supabase db reset",
     "db:types": "supabase gen types typescript --local > src/types/database.ts",
-    "db:push": "supabase db push"
+    "db:push": "supabase db push",
+    "db:test": "supabase test db && ./scripts/test-concurrency.sh"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
