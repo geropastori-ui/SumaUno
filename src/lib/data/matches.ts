@@ -125,3 +125,55 @@ export async function getMatchDetail(id: string) {
     contacts: (contactsRes.data ?? []) as Contact[],
   };
 }
+
+export type MyMatchItem = MatchListItem & {
+  role: "organizer" | "player";
+  myStatus: "pending" | "confirmed" | null;
+  pendingRequests: number;
+};
+
+/** Partidos que organizo y en los que estoy anotado (pendiente o confirmado). */
+export async function getMyMatches(profileId: string): Promise<MyMatchItem[]> {
+  const supabase = await createClient();
+  const [organizedRes, joinedRes] = await Promise.all([
+    supabase.from("matches").select(MATCH_LIST_SELECT).eq("organizer_id", profileId).order("starts_at"),
+    supabase
+      .from("match_participants")
+      .select(`status, match:matches!inner (${MATCH_LIST_SELECT})`)
+      .eq("profile_id", profileId)
+      .in("status", ["pending", "confirmed"]),
+  ]);
+  if (organizedRes.error) throw organizedRes.error;
+  if (joinedRes.error) throw joinedRes.error;
+
+  const organized = organizedRes.data as unknown as MatchListItem[];
+  const ids = organized.map((m) => m.id);
+  const pendingByMatch = new Map<string, number>();
+  if (ids.length) {
+    const { data } = await supabase
+      .from("match_participants")
+      .select("match_id")
+      .in("match_id", ids)
+      .eq("status", "pending");
+    for (const row of data ?? []) pendingByMatch.set(row.match_id, (pendingByMatch.get(row.match_id) ?? 0) + 1);
+  }
+
+  const joined = (joinedRes.data as unknown as Array<{ status: "pending" | "confirmed"; match: MatchListItem }>).map(
+    (row): MyMatchItem => ({ ...row.match, role: "player", myStatus: row.status, pendingRequests: 0 }),
+  );
+
+  return [
+    ...organized.map((m): MyMatchItem => ({
+      ...m,
+      role: "organizer",
+      myStatus: null,
+      pendingRequests: pendingByMatch.get(m.id) ?? 0,
+    })),
+    ...joined,
+  ].sort((a, b) => a.starts_at.localeCompare(b.starts_at));
+}
+
+/** Próximo: activo y no empezado hace más de 2 horas (mismo criterio que el archivado automático). */
+export function isUpcoming(m: Pick<MatchListItem, "status" | "starts_at">, now = Date.now()) {
+  return ["open", "full", "closed"].includes(m.status) && new Date(m.starts_at).getTime() > now - 2 * 3600_000;
+}
