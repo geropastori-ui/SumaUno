@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Inter } from "next/font/google";
+import { ServiceWorkerRegister } from "@/components/sw-register";
 import { getTheme } from "@/lib/theme";
 import "./globals.css";
 
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
   description:
     "¿Te falta uno para el partido? Publicalo y sumá jugadores de tu zona. Fútbol 5, pádel y básquet.",
   applicationName: "SumáUno",
+  appleWebApp: { capable: true, title: "SumáUno", statusBarStyle: "default" },
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
@@ -38,7 +41,10 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
       lang="es-AR"
       className={`${display.variable} ${sans.variable} ${theme === "system" ? "" : theme}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <ServiceWorkerRegister />
+      </body>
     </html>
   );
 }

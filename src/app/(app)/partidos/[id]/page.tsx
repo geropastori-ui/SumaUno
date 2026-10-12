@@ -1,7 +1,7 @@
-import { ArrowLeft, CalendarClock, MapPin, PartyPopper, Wallet } from "lucide-react";
+import { CalendarClock, MapPin, PartyPopper, Wallet } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BackLink } from "@/components/back-link";
 import { CompatTag } from "@/components/match/compat-tag";
 import { JoinBar } from "@/components/match/join-bar";
 import { MatchLive } from "@/components/match/match-live";
@@ -73,9 +73,7 @@ export default async function MatchPage({ params, searchParams }: PageProps<"/pa
       <MatchLive matchId={match.id} />
 
       <div className="flex items-center justify-between px-5 pt-4">
-        <Link href="/explorar" className="inline-flex h-10 items-center gap-1 text-sm font-semibold text-ink-soft">
-          <ArrowLeft className="size-4" /> Volver
-        </Link>
+        <BackLink fallback="/explorar" />
         {statusLabel && (
           <span className="rounded-full bg-surface-2 px-3 py-1 text-sm font-bold text-ink-soft">{statusLabel}</span>
         )}
