@@ -2,6 +2,7 @@
 
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useState } from "react";
+import { setClientCookie } from "@/lib/client-cookie";
 import { cn } from "@/lib/cn";
 
 export type Theme = "system" | "light" | "dark";
@@ -13,7 +14,7 @@ const options = [
 ] as const;
 
 function applyTheme(value: Theme) {
-  document.cookie = `theme=${value}; path=/; max-age=31536000; samesite=lax`;
+  setClientCookie("theme", value, 60 * 60 * 24 * 365);
   const root = document.documentElement;
   root.classList.remove("light", "dark");
   if (value !== "system") root.classList.add(value);
