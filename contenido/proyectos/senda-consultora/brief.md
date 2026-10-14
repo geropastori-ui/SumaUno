@@ -1,15 +1,16 @@
-# Brief de contenido: Consultora estratégica
+# Brief de contenido: Senda Consultora
 
 ## Proyecto
 - **Qué es:** Consultora estratégica integral para pymes: estrategia de negocio, transformación digital e IA, marketing y comercial, gestión y operaciones.
-- **Nombre:** [DATO]
+- **Nombre:** Senda Consultora
 - **Propuesta de valor (en una frase):** [DATO — propuesta inicial: "Ordenamos tu pyme para que crezca sin depender de vos."]
 - **Etapa:** Lanzamiento.
 - **Links:** [DATO: Instagram, web, WhatsApp]
 
 ## Objetivo del contenido
 - **Objetivo principal:** Generar clientes (consultas y reuniones de diagnóstico).
-- **CTA preferido:** Escribir una palabra clave por DM o en comentarios para pedir un diagnóstico. [DATO: confirmar si el diagnóstico es gratuito]
+- **CTA preferido:** Pedir el **diagnóstico gratuito** escribiendo una palabra clave por DM o en comentarios. El diagnóstico es la instancia donde se cierra la venta, así que todo el contenido apunta ahí.
+- **Duración / modalidad del diagnóstico:** [DATO]
 
 ## Público
 - **Quiénes son:** Dueños, socios y gerentes de pymes.
@@ -38,7 +39,8 @@
 | Instagram stories | [DATO] | Media |
 
 ## Recursos disponibles
-- [DATO: ¿quién aparece a cámara? ¿hay casos/clientes que se puedan mostrar?]
+- **A cámara:** el fundador. En una segunda etapa se suma Ceci de forma progresiva (sketches, dinámicas de a dos).
+- **Casos/clientes para mostrar:** [DATO]
 
 ## Aprendizajes
 -
