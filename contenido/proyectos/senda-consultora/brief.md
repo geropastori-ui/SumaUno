@@ -34,13 +34,15 @@
 ## Plataformas y frecuencia
 | Plataforma | Frecuencia | Prioridad |
 |---|---|---|
-| Instagram Reels | [DATO] | Alta |
-| Instagram carrusel | [DATO] | Alta |
+| Instagram Reels | [DATO] | **Principal** |
+| Instagram carrusel | [DATO] | Secundaria (reutiliza guiones de reels) |
 | Instagram stories | [DATO] | Media |
 
 ## Recursos disponibles
-- **A cámara:** el fundador. En una segunda etapa se suma Ceci de forma progresiva (sketches, dinámicas de a dos).
+- **Etapa 1 (actual): sin rostro.** Nadie aparece a cámara. Se trabaja con texto en pantalla, voz en off, manos/planos POV, grabaciones de pantalla y b-roll (propio o de bancos libres como Pexels o el de CapCut).
+- **Etapa 2:** aparece el fundador a cámara y, de forma progresiva, Ceci (sketches, dinámicas de a dos).
 - **Casos/clientes para mostrar:** [DATO]
 
 ## Aprendizajes
--
+- Prioridad absoluta en Reels.
+- Por ahora, nada de rostro a cámara: todo el contenido de la etapa 1 tiene que poder hacerse sin aparecer.
