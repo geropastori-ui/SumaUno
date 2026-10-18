@@ -12,7 +12,7 @@
 |---|---|---|---|---|
 | 1 – Gancho | 0–4 s | "La mayoría de las pymes no se estancan por falta de clientes." | Persiana de un local subiendo a la mañana | "No es falta de clientes" |
 | 2 – El problema | 4–15 s | "Se estancan porque todo pasa por el dueño, los números no están claros y cada herramienta nueva suma más caos." | Manos tapadas de papeles, celular con 40 notificaciones, pestañas abiertas | "Todo pasa por el dueño" |
-| 3 – Primer video | 15–22 s | "Este es el primer video de Senda, y arranco con una idea simple: no tenés que resolverlo solo." | Fondo Pizarra, texto que entra por líneas | "Primer video de Senda" → "No tenés que resolverlo **solo**." |
+| 3 – Puente | 13–15 s | "No tenés que resolverlo solo." | Fondo Pizarra, texto que entra por líneas | "No tenés que resolverlo **solo**." |
 | 4 – Senda | 22–32 s | "Por eso creamos Senda: para acompañarte a ordenar tu estrategia, tus finanzas, tus procesos y tu marketing. Porque crecer no es correr más: es tener un camino claro." | Pies caminando por un sendero; corte a fondo Pizarra donde la "S" naranja del monograma se dibuja como un camino y se arma el logo vertical `negativo` | "Estrategia · Finanzas · Procesos · Marketing" → "Crecer no es correr más. Es tener un camino claro." |
 | 5 – CTA | 32–40 s | "Arrancamos con un diagnóstico gratuito: lo miramos juntos y vemos por dónde empezar. Escribime por privado… y seguinos, que esto recién empieza." | Placa con logo de Senda | "Diagnóstico gratuito → Agendá tu consulta · Seguinos" |
 
