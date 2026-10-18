@@ -4,7 +4,8 @@
 - **Qué es:** Consultora estratégica integral para pymes: estrategia de negocio, transformación digital e IA, marketing y comercial, gestión y operaciones.
 - **Nombre:** Senda Consultora
 - **Propuesta de valor (en una frase):** [DATO — propuesta inicial: "Ordenamos tu pyme para que crezca sin depender de vos."]
-- **Etapa:** Lanzamiento.
+- **Etapa:** Lanzamiento. Cuenta de Instagram nueva (arranca de cero).
+- **Posicionamiento honesto:** el fundador **no tiene experiencia comprobable previa** con pymes ni en consultoría. No afirmar trayectoria, años, casos ni resultados. Senda se presenta como un proyecto que arranca y **propone acompañar** ("te acompaño", "lo vemos juntos"), con contenido útil que demuestre criterio.
 - **Links:** [DATO: Instagram, web, WhatsApp]
 
 ## Objetivo del contenido
@@ -29,7 +30,7 @@
 2. **Opinión:** miradas contraintuitivas sobre gestión y crecimiento (autoridad).
 3. **Humor reconocible:** situaciones del día a día del dueño de pyme (alcance).
 4. **Herramientas:** tips aplicables ya, sobre todo procesos e IA (guardados).
-5. **Detrás de escena:** quién está detrás de la consultora, cómo trabaja, casos (confianza).
+5. **Detrás de escena:** cómo nace Senda, cómo trabajamos, el proceso de construir la consultora en público (confianza).
 
 ## Plataformas y frecuencia
 | Plataforma | Frecuencia | Prioridad |
@@ -80,8 +81,9 @@ Kit de logo en `marca/` (SVG para diseño, PNG transparentes) y vista previa en 
 ## Recursos disponibles
 - **Etapa 1 (actual): sin rostro.** Nadie aparece a cámara. Se trabaja con texto en pantalla, voz en off, manos/planos POV, grabaciones de pantalla y b-roll (propio o de bancos libres como Pexels o el de CapCut).
 - **Etapa 2:** aparece el fundador a cámara y, de forma progresiva, Ceci (sketches, dinámicas de a dos).
-- **Casos/clientes para mostrar:** [DATO]
+- **Casos/clientes para mostrar:** todavía no hay. Cuando haya, solo con permiso del cliente.
 
 ## Aprendizajes
 - Prioridad absoluta en Reels.
+- Nunca escribir frases que impliquen experiencia previa ("lo vi una y otra vez", "trabajé X años", "ayudamos a N pymes"). Usar "acompañar", "lo vemos juntos", "recién arrancamos".
 - Por ahora, nada de rostro a cámara: todo el contenido de la etapa 1 tiene que poder hacerse sin aparecer.

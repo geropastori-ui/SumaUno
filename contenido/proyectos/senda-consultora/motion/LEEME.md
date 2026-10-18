@@ -17,10 +17,10 @@ Grabá cada frase para que **empiece** en el segundo indicado (en CapCut alcanza
 | 0:04 | 0:08 | Diagrama: todo converge en el DUEÑO | "Se estancan porque todo pasa por el dueño," |
 | 0:08 | 0:11,5 | Barras con signos de pregunta | "los números no están claros" |
 | 0:11,5 | 0:15 | Apps que caen y se apilan | "y cada herramienta nueva suma más caos." |
-| 0:15 | 0:22 | "Trabajando con pymes" → "Lo vi una y otra vez." | "Yo [tu experiencia] y lo vi una y otra vez." (la frase "lo vi" aparece en 0:17,6) |
-| 0:22 | 0:27,4 | "Por eso armé Senda." + 4 pilares | "Por eso armé Senda: para ayudar a las pymes a ordenar su estrategia, sus números, sus procesos y su marketing." |
+| 0:15 | 0:22 | "01 · Primer video de Senda" → "No tenés que resolverlo solo." | "Este es el primer video de Senda, y arranco con una idea simple: no tenés que resolverlo solo." ("No tenés que…" aparece en 0:18,8) |
+| 0:22 | 0:27,4 | "Por eso armé Senda." + 4 pilares | "Por eso armé Senda: para acompañarte a ordenar tu estrategia, tus números, tus procesos y tu marketing." |
 | 0:27,4 | 0:32 | El camino en forma de S + "Crecer no es correr más. Es tener un camino claro." | "Porque crecer no es correr más: es tener un camino claro." ("Es tener…" aparece en 0:29,4) |
-| 0:32 | 0:40 | La S se dibuja → logo → "Diagnóstico gratuito / Escribime por DM" | "Empezamos siempre con un diagnóstico gratuito. Si sentís que todo pasa por vos, escribime." |
+| 0:32 | 0:40 | La S se dibuja → logo → "Diagnóstico gratuito / Escribime por DM / Recién arrancamos · Seguinos" | "Arrancamos con un diagnóstico gratuito: lo miramos juntos y vemos por dónde empezar. Escribime por privado… y seguinos, que esto recién empieza." |
 
 **Mezcla sugerida:** voz a -14 LUFS aprox. + música instrumental suave de la biblioteca de Instagram al 10–15 %.
 

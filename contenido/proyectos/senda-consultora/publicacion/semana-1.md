@@ -24,18 +24,20 @@ Reels sin rostro. Guiones completos en `guiones/`. Identidad visual en `brief.md
 ---
 
 ## Lunes 26/10 · Reel #5 · Por qué existe Senda
-**Estado:** falta [DATO] de tu experiencia (escena 3) para poder grabar la voz en off.
+**Estado:** listo para grabar la voz (guion en `motion/reel-05-guion-voz.md`). Video: `motion/senda-reel-05-por-que-existe-senda.mp4`.
 
 **Portada (1080×1920, texto en la zona central 1080×1350):** fondo Pizarra, monograma naranja grande, texto en Red Hat Display Black, en Niebla: "Por qué existe **Senda**" ("Senda" en naranja).
 
 **Caption:**
+> Primer video de Senda 👋
+>
 > Las pymes no se estancan por falta de clientes. Se estancan porque todo pasa por el dueño.
 >
-> Por eso existe Senda: ayudamos a pymes a ordenar estrategia, números, procesos y marketing para crecer sin depender de una sola persona.
+> Por eso existe Senda: para acompañar a pymes a ordenar estrategia, números, procesos y marketing, y crecer sin depender de una sola persona.
 >
 > Porque crecer no es correr más. Es tener un camino claro.
 >
-> Empezamos siempre con un diagnóstico gratuito. Si te sirve, escribime 📩
+> Arrancamos con un diagnóstico gratuito. Si te sirve, escribime 📩 Y seguinos: esto recién empieza.
 >
 > #pymes #pymesargentinas #consultoria #gestionempresarial #emprendedores
 

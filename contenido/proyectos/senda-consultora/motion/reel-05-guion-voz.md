@@ -1,5 +1,5 @@
-# Guion de voz – Reel #5 · Por qué existe Senda
-Duración: 40 s · Ritmo: conversado, seguro, sin apuro · Tono: como si se lo contaras a un amigo que tiene una pyme.
+# Guion de voz – Reel #5 · Por qué existe Senda (primer video de la cuenta)
+Duración: 40 s · Ritmo: conversado, seguro, sin apuro · Tono: cercano y honesto, como quien arranca algo nuevo y te invita a sumarte.
 
 Los segundos indican dónde tiene que **empezar** cada frase para que coincida con la animación.
 `/` = pausa corta · `//` = pausa larga · **negrita** = palabra para remarcar.
@@ -10,21 +10,19 @@ Los segundos indican dónde tiene que **empezar** cada frase para que coincida c
 | **0:04** | Todo converge en el DUEÑO | "El problema es que **todo**, / absolutamente todo, / pasa por vos." |
 | **0:08** | Barras con "?" | "Los números no están claros…" |
 | **0:11,5** | Apps que se apilan | "y cada herramienta nueva que sumás / suma más **caos**." |
-| **0:15** | "Trabajando con pymes" | "Hace [X años] que trabajo con pymes…" |
-| **0:17,5** | "Lo vi una y otra vez." | "y lo vi **una y otra vez**: / dueños que laburan doce horas… / y no avanzan." |
-| **0:22** | "Por eso armé Senda." + 4 pilares | "Por eso armé **Senda**: / para ordenar tu estrategia, / tus números, / tus procesos / y tu marketing." |
+| **0:15** | "Primer video de Senda" | "Este es el **primer video** de Senda, / y arranco con una idea simple:" |
+| **0:18,8** | "No tenés que resolverlo solo." | "no tenés que resolverlo **solo**." |
+| **0:22** | "Por eso armé Senda." + 4 pilares | "Por eso armé **Senda**: / para acompañarte a ordenar tu estrategia, / tus números, / tus procesos / y tu marketing." |
 | **0:27,5** | "Crecer no es correr más." | "Porque crecer no es correr más. //" |
 | **0:29,4** | "Es tener un camino claro." | "Es tener un **camino claro**." |
 | **0:32** | La S se dibuja → logo | (silencio o respiración: dejá que se vea el logo) |
-| **0:34** | "Diagnóstico gratuito / Escribime por DM" | "Empezamos siempre con un **diagnóstico gratuito**. / Si sentís que todo pasa por vos, / escribime por privado." |
+| **0:34** | "Diagnóstico gratuito / Escribime por DM / Recién arrancamos · Seguinos" | "Arrancamos con un **diagnóstico gratuito**: / lo miramos juntos y vemos por dónde empezar. / Escribime por privado… / y seguinos, que esto recién empieza." |
 
 ## Texto corrido (para leer de un tirón)
 > Si tu pyme no crece, el problema no son los clientes. El problema es que todo, absolutamente todo, pasa por vos. Los números no están claros… y cada herramienta nueva que sumás suma más caos.
-> Hace [X años] que trabajo con pymes… y lo vi una y otra vez: dueños que laburan doce horas… y no avanzan.
-> Por eso armé Senda: para ordenar tu estrategia, tus números, tus procesos y tu marketing. Porque crecer no es correr más. Es tener un camino claro.
-> Empezamos siempre con un diagnóstico gratuito. Si sentís que todo pasa por vos, escribime por privado.
-
-**[X años]:** completalo con tu experiencia real (por ejemplo "Hace ocho años que trabajo con pymes" o "Trabajé años del lado de adentro de pymes"). Si no aplica, decí: "Trabajando con pymes, lo vi una y otra vez".
+> Este es el primer video de Senda, y arranco con una idea simple: no tenés que resolverlo solo.
+> Por eso armé Senda: para acompañarte a ordenar tu estrategia, tus números, tus procesos y tu marketing. Porque crecer no es correr más. Es tener un camino claro.
+> Arrancamos con un diagnóstico gratuito: lo miramos juntos y vemos por dónde empezar. Escribime por privado… y seguinos, que esto recién empieza.
 
 ## Ganchos alternativos (grabá los tres y elegí)
 Todos entran en los primeros 4 segundos con la misma pantalla.
@@ -34,9 +32,9 @@ Todos entran en los primeros 4 segundos con la misma pantalla.
 
 ## Tips de grabación
 - **El gancho es lo más importante:** grabalo 3 o 4 veces con más energía que el resto; los primeros 2 segundos deciden si siguen mirando.
+- En "primer video de Senda" se puede notar una sonrisa: es un arranque, que se escuche con ganas.
 - Micrófono a 15–20 cm, apenas de costado para evitar los golpes de aire en las "p".
 - Habitación con cosas blandas (cortinas, sillón, placard abierto); nada de baño ni cocina.
-- Sonreí mientras hablás en el gancho y en el cierre: se escucha.
 - Grabá cada bloque por separado y dejá 2 s de silencio entre tomas: es más fácil de editar.
 - Si te sobra o falta tiempo en un bloque, no aceleres: avisame y ajusto la animación.
 
