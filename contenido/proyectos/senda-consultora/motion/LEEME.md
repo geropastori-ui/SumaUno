@@ -9,8 +9,8 @@ Videos hechos con **HyperFrames** (HeyGen): cada video es un HTML animado con GS
 ## Reel #5 · Sincronización con la voz de Gero
 Video con voz: `senda-reel-05-por-que-existe-senda-con-voz.mp4`. Los audios están en `reel-05-por-que-existe-senda/assets/voz/` y se montan en `index.html` como `<audio>` con su `data-start`.
 
-**Versión actual (v5 · 28,5 s):**
-- **Voz:** la voz original de Gero (sin cambio de tono). `voz-1.N-limpia.m4a` (sin respiraciones + procesado de locución) → `voz-1.N-final.m4a` con `rubberband` solo para la velocidad ×1,2, conservando tono y formantes.
+**Versión actual (v6 · 28,5 s):**
+- **Voz:** la voz original de Gero, en un solo paso y sin pérdida desde las grabaciones `voz-1.N.m4a`: se silencian respiraciones → procesado suave (paso-altos 70 Hz, EQ leve, compresión 2,5:1, **sin reducción de ruido**) → velocidad ×1,2 con `atempo` (mantiene el tono exacto y suena natural en voz hablada) → `voz-1.N-final.wav`. Se descartó `rubberband` porque dejaba un timbre metálico/robótico.
 - **Video:** los tiempos en `index.html` están escritos a velocidad original y se escalan con `K = 1/1,2` (`at()` y `d()` en el script); los `data-start` ya están escalados.
 - **Sin pausa en el logo:** la voz del cierre (1.7) arranca mientras la S se dibuja.
 - **Textos dinámicos:** cada título se separa en palabras que entran con rebote, zoom y desenfoque; golpe de escala en la palabra naranja; salidas rápidas con desenfoque; zoom lento de cámara en cada escena.
