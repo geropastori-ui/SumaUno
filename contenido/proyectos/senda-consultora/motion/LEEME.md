@@ -4,10 +4,14 @@ Videos hechos con **HyperFrames** (HeyGen): cada video es un HTML animado con GS
 
 | Reel | Proyecto | Video |
 |---|---|---|
-| #5 · Por qué existe Senda | `reel-05-por-que-existe-senda/` | `senda-reel-05-por-que-existe-senda-con-voz.mp4` (1080×1920, 30 fps, 36,4 s, con voz) |
+| #5 · Por qué existe Senda | `reel-05-por-que-existe-senda/` | `senda-reel-05-por-que-existe-senda-con-voz.mp4` (1080×1920, 30 fps, 31,7 s, voz anónima) |
 
 ## Reel #5 · Sincronización con la voz de Gero
 Video con voz: `senda-reel-05-por-que-existe-senda-con-voz.mp4`. Los audios están en `reel-05-por-que-existe-senda/assets/voz/` y se montan en `index.html` como `<audio>` con su `data-start`.
+
+**Versión actual (voz anónima, +15 % de velocidad):** cada audio `voz-1.N-limpia.m4a` pasa por `rubberband` (tempo ×1,15, tono -3 semitonos con formantes corridos para que no se reconozca la voz) → `voz-1.N-final.m4a`, y todo el timeline del video está escalado ×1/1,15. Duración final: **31,7 s**. Para volver a la voz natural: usar las `-limpia` y dividir los tiempos por 0,8696 (copia previa en el historial de git).
+
+Tiempos de la versión anterior (velocidad normal; dividir por 1,15 para la actual):
 
 | Audio | Entra en | Habla | Escena |
 |---|---|---|---|
