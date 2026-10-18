@@ -4,12 +4,16 @@ Videos hechos con **HyperFrames** (HeyGen): cada video es un HTML animado con GS
 
 | Reel | Proyecto | Video |
 |---|---|---|
-| #5 · Por qué existe Senda | `reel-05-por-que-existe-senda/` | `senda-reel-05-por-que-existe-senda-con-voz.mp4` (1080×1920, 30 fps, 31,7 s, voz anónima) |
+| #5 · Por qué existe Senda | `reel-05-por-que-existe-senda/` | `senda-reel-05-por-que-existe-senda-con-voz.mp4` (1080×1920, 30 fps, 28,5 s, voz anónima) |
 
 ## Reel #5 · Sincronización con la voz de Gero
 Video con voz: `senda-reel-05-por-que-existe-senda-con-voz.mp4`. Los audios están en `reel-05-por-que-existe-senda/assets/voz/` y se montan en `index.html` como `<audio>` con su `data-start`.
 
-**Versión actual (voz anónima, +15 % de velocidad):** cada audio `voz-1.N-limpia.m4a` pasa por `rubberband` (tempo ×1,15, tono -3 semitonos con formantes corridos para que no se reconozca la voz) → `voz-1.N-final.m4a`, y todo el timeline del video está escalado ×1/1,15. Duración final: **31,7 s**. Para volver a la voz natural: usar las `-limpia` y dividir los tiempos por 0,8696 (copia previa en el historial de git).
+**Versión actual (v4 · 28,5 s):**
+- **Voz:** `voz-1.N-limpia.m4a` → `voz-1.N-final.m4a` con `asetrate ×0,95 + rubberband` (tono -2 semitonos, formantes -5 %, velocidad ×1,2) y un toque de graves en 160 Hz. Cambio sutil para que suene a otra persona real, no a voz trucada.
+- **Video:** los tiempos en `index.html` están escritos a velocidad original y se escalan con `K = 1/1,2` (`at()` y `d()` en el script); los `data-start` ya están escalados.
+- **Sin pausa en el logo:** la voz del cierre (1.7) arranca mientras la S se dibuja.
+- **Textos dinámicos:** cada título se separa en palabras que entran con rebote, zoom y desenfoque; golpe de escala en la palabra naranja; salidas rápidas con desenfoque; zoom lento de cámara en cada escena.
 
 Tiempos de la versión anterior (velocidad normal; dividir por 1,15 para la actual):
 
