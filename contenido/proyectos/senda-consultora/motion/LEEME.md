@@ -4,25 +4,22 @@ Videos hechos con **HyperFrames** (HeyGen): cada video es un HTML animado con GS
 
 | Reel | Proyecto | Video |
 |---|---|---|
-| #5 · Por qué existe Senda | `reel-05-por-que-existe-senda/` | `senda-reel-05-por-que-existe-senda.mp4` (1080×1920, 30 fps, 40 s, sin audio) |
+| #5 · Por qué existe Senda | `reel-05-por-que-existe-senda/` | `senda-reel-05-por-que-existe-senda-con-voz.mp4` (1080×1920, 30 fps, 40 s, con voz) |
 
-## Reel #5 · Hoja de tiempos para grabar la voz en off
-Guion completo para grabar (con ganchos alternativos y tips): `reel-05-guion-voz.md`.
+## Reel #5 · Sincronización con la voz de Gero
+Video con voz: `senda-reel-05-por-que-existe-senda-con-voz.mp4`. Los audios están en `reel-05-por-que-existe-senda/assets/voz/` y se montan en `index.html` como `<audio>` con su `data-start`.
 
-Grabá cada frase para que **empiece** en el segundo indicado (en CapCut alcanza con correr el clip de audio). Si una frase te queda más larga, avisame y estiro esa escena.
-
-| Desde | Hasta | Escena en pantalla | Voz en off |
+| Audio | Entra en | Habla | Escena |
 |---|---|---|---|
-| 0:00 | 0:04 | "Si tu pyme no crece… No es falta de clientes." | "Si tu pyme no crece, el problema no son los clientes." |
-| 0:04 | 0:08 | Diagrama: todo converge en el DUEÑO | "Se estancan porque todo pasa por el dueño," |
-| 0:08 | 0:11,5 | Barras con signos de pregunta | "los números no están claros" |
-| 0:11,5 | 0:15 | Apps que caen y se apilan | "y cada herramienta nueva suma más caos." |
-| 0:15 | 0:22 | "01 · Primer video de Senda" → "No tenés que resolverlo solo." | "Este es el primer video de Senda, y arranco con una idea simple: no tenés que resolverlo solo." ("No tenés que…" aparece en 0:18,8) |
-| 0:22 | 0:27,4 | "Por eso armé Senda." + 4 pilares | "Por eso armé Senda: para acompañarte a ordenar tu estrategia, tus números, tus procesos y tu marketing." |
-| 0:27,4 | 0:32 | El camino en forma de S + "Crecer no es correr más. Es tener un camino claro." | "Porque crecer no es correr más: es tener un camino claro." ("Es tener…" aparece en 0:29,4) |
-| 0:32 | 0:40 | La S se dibuja → logo → "Diagnóstico gratuito / Escribime por DM / Recién arrancamos · Seguinos" | "Arrancamos con un diagnóstico gratuito: lo miramos juntos y vemos por dónde empezar. Escribime por privado… y seguinos, que esto recién empieza." |
+| 1.1 · Gancho | **pendiente** | 0:00–0:04 | "Si tu pyme no crece… No es falta de clientes." |
+| 1.2 | 0:03,5 | 0:04,4–0:07,8 | Todo converge en el DUEÑO |
+| 1.3 | 0:07,3 | 0:08,3–0:13,6 | Números (0:08,1) → herramientas y caos (0:10,1) |
+| 1.4 | 0:12,3 | 0:14,1–0:20,4 | "01 · Primer video de Senda" → "No tenés que resolverlo solo." (0:18,6) |
+| 1.5 | 0:20,0 | 0:20,9–0:27,5 | "Por eso creamos Senda." + pilares al decirlos: Estrategia 0:23,9 · Finanzas 0:24,8 · Procesos 0:25,8 · Marketing 0:26,9 |
+| 1.6 | 0:27,3 | 0:28,3–0:31,4 | "Crecer no es correr más." → "Es tener un camino claro." (0:30,2) |
+| 1.7 · Cierre / CTA | **pendiente** | 0:32–0:40 | Logo → "Diagnóstico gratuito / Escribime por DM" |
 
-**Mezcla sugerida:** voz a -14 LUFS aprox. + música instrumental suave de la biblioteca de Instagram al 10–15 %.
+Guion de referencia: `reel-05-guion-voz.md`.
 
 ## Editar y volver a renderizar
 Requiere Node 22+ y FFmpeg.

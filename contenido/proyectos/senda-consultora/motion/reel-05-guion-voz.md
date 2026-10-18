@@ -12,7 +12,7 @@ Los segundos indican dónde tiene que **empezar** cada frase para que coincida c
 | **0:11,5** | Apps que se apilan | "y cada herramienta nueva que sumás / suma más **caos**." |
 | **0:15** | "Primer video de Senda" | "Este es el **primer video** de Senda, / y arranco con una idea simple:" |
 | **0:18,8** | "No tenés que resolverlo solo." | "no tenés que resolverlo **solo**." |
-| **0:22** | "Por eso armé Senda." + 4 pilares | "Por eso armé **Senda**: / para acompañarte a ordenar tu estrategia, / tus números, / tus procesos / y tu marketing." |
+| **0:22** | "Por eso creamos Senda." + 4 pilares | "Por eso creamos **Senda**: / para acompañarte a ordenar tu estrategia, / tus finanzas, / tus procesos / y tu marketing." |
 | **0:27,5** | "Crecer no es correr más." | "Porque crecer no es correr más. //" |
 | **0:29,4** | "Es tener un camino claro." | "Es tener un **camino claro**." |
 | **0:32** | La S se dibuja → logo | (silencio o respiración: dejá que se vea el logo) |
@@ -21,7 +21,7 @@ Los segundos indican dónde tiene que **empezar** cada frase para que coincida c
 ## Texto corrido (para leer de un tirón)
 > Si tu pyme no crece, el problema no son los clientes. El problema es que todo, absolutamente todo, pasa por vos. Los números no están claros… y cada herramienta nueva que sumás suma más caos.
 > Este es el primer video de Senda, y arranco con una idea simple: no tenés que resolverlo solo.
-> Por eso armé Senda: para acompañarte a ordenar tu estrategia, tus números, tus procesos y tu marketing. Porque crecer no es correr más. Es tener un camino claro.
+> Por eso creamos Senda: para acompañarte a ordenar tu estrategia, tus finanzas, tus procesos y tu marketing. Porque crecer no es correr más. Es tener un camino claro.
 > Arrancamos con un diagnóstico gratuito: lo miramos juntos y vemos por dónde empezar. Escribime por privado… y seguinos, que esto recién empieza.
 
 ## Ganchos alternativos (grabá los tres y elegí)
