@@ -4,20 +4,23 @@ Videos hechos con **HyperFrames** (HeyGen): cada video es un HTML animado con GS
 
 | Reel | Proyecto | Video |
 |---|---|---|
-| #5 · Por qué existe Senda | `reel-05-por-que-existe-senda/` | `senda-reel-05-por-que-existe-senda-con-voz.mp4` (1080×1920, 30 fps, 40 s, con voz) |
+| #5 · Por qué existe Senda | `reel-05-por-que-existe-senda/` | `senda-reel-05-por-que-existe-senda-con-voz.mp4` (1080×1920, 30 fps, 41 s, con voz) |
 
 ## Reel #5 · Sincronización con la voz de Gero
 Video con voz: `senda-reel-05-por-que-existe-senda-con-voz.mp4`. Los audios están en `reel-05-por-que-existe-senda/assets/voz/` y se montan en `index.html` como `<audio>` con su `data-start`.
 
 | Audio | Entra en | Habla | Escena |
 |---|---|---|---|
-| 1.1 · Gancho | **pendiente** | 0:00–0:04 | "Si tu pyme no crece… No es falta de clientes." |
-| 1.2 | 0:03,5 | 0:04,4–0:07,8 | Todo converge en el DUEÑO |
-| 1.3 | 0:07,3 | 0:08,3–0:13,6 | Números (0:08,1) → herramientas y caos (0:10,1) |
-| 1.4 | 0:12,3 | 0:14,1–0:20,4 | "01 · Primer video de Senda" → "No tenés que resolverlo solo." (0:18,6) |
-| 1.5 | 0:20,0 | 0:20,9–0:27,5 | "Por eso creamos Senda." + pilares al decirlos: Estrategia 0:23,9 · Finanzas 0:24,8 · Procesos 0:25,8 · Marketing 0:26,9 |
-| 1.6 | 0:27,3 | 0:28,3–0:31,4 | "Crecer no es correr más." → "Es tener un camino claro." (0:30,2) |
-| 1.7 · Cierre / CTA | **pendiente** | 0:32–0:40 | Logo → "Diagnóstico gratuito / Escribime por DM" |
+| 1.1 | 0:00 (recortado desde 0,6 s) | 0:00,2–0:03 | "Si tu pyme no crece… No es falta de clientes." |
+| 1.2 | 0:02,6 | 0:03,5–0:06,9 | Todo converge en el DUEÑO |
+| 1.3 | 0:06,4 | 0:07,4–0:12,7 | Números (0:07,2) → herramientas y caos (0:09,2) |
+| 1.4 | 0:11,4 | 0:13,2–0:19,5 | "01 · Primer video de Senda" → "No tenés que resolverlo solo." (0:17,7) |
+| 1.5 | 0:19,1 | 0:20–0:26,7 | "Por eso creamos Senda." + pilares: Estrategia 0:23 · Finanzas 0:23,9 · Procesos 0:24,9 · Marketing 0:26 |
+| 1.6 | 0:26,4 | 0:27,4–0:30,6 | "Crecer no es correr más." → "Es tener un camino claro." (0:29,3) |
+| — | — | 0:30,6–0:33 | La S se dibuja y aparece el logo (sin voz) |
+| 1.7 | 0:32,5 | 0:33–0:40 | "Diagnóstico gratuito" (0:33,4) → "Escribime por DM" (0:37) → "Recién arrancamos · Seguinos" (0:39) |
+
+Duración final: **41 s**. Audio normalizado a -14 LUFS (estándar de Instagram) después del render.
 
 Guion de referencia: `reel-05-guion-voz.md`.
 
