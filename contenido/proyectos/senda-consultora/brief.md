@@ -52,8 +52,9 @@ Fuente: LEEME del kit de logo (los archivos del logo todavía no llegaron: [DATO
 
 **Reglas para reels:**
 - Texto en pantalla en Red Hat Display Bold, en caja Niebla con texto Pizarra (o al revés) para que se lea sobre cualquier imagen.
-- Naranja solo para resaltar **una** palabra o número por pantalla y el CTA. Nunca texto naranja sobre Niebla: no se lee bien (contraste bajo).
-- Placa final: fondo Pizarra o Verde mar, logo en Niebla, CTA en Naranja.
+- Naranja solo para resaltar **una** palabra o número por pantalla y el CTA. Texto naranja **solo sobre Pizarra** (contraste 5,2:1). Nunca texto naranja sobre Niebla (2,6:1) ni sobre Verde mar (2,9:1).
+- Placa final: fondo Pizarra, logo en Niebla, CTA en Naranja. Si el fondo es Verde mar, el CTA va como botón naranja con texto Pizarra.
+- Combinaciones seguras: Niebla sobre Pizarra (13,6:1), Niebla sobre Verde mar (7,8:1), Pizarra sobre Naranja (5,2:1).
 - Zona segura 9:16: no poner texto en el 20 % inferior ni pegado al borde derecho (ahí van la descripción y los botones de Instagram).
 - Imágenes de apoyo con tonos fríos/neutros para que combinen con la paleta.
 
