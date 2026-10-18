@@ -20,7 +20,7 @@ Video con voz: `senda-reel-05-por-que-existe-senda-con-voz.mp4`. Los audios est�
 | — | — | 0:30,6–0:33 | La S se dibuja y aparece el logo (sin voz) |
 | 1.7 | 0:32,5 | 0:33–0:40 | "Diagnóstico gratuito" (0:33,4) → "Escribime por DM" (0:37) → "Recién arrancamos · Seguinos" (0:39) |
 
-Duración final: **41 s**. Audio normalizado a -14 LUFS (estándar de Instagram) después del render.
+Duración final: **41 s**. Audio normalizado después del render: -14,7 LUFS medidos, pico -0,9 dBFS (Instagram apunta a ~-14).
 
 Guion de referencia: `reel-05-guion-voz.md`.
 
