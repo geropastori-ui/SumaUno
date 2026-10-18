@@ -24,7 +24,7 @@ Reels sin rostro. Guiones completos en `guiones/`. Identidad visual en `brief.md
 ---
 
 ## Lunes 26/10 · Reel #5 · Por qué existe Senda
-**Estado:** listo para grabar la voz (guion en `motion/reel-05-guion-voz.md`). Video: `motion/senda-reel-05-por-que-existe-senda.mp4`.
+**Estado:** ✅ CERRADO. Video final: `motion/senda-reel-05-por-que-existe-senda-con-voz.mp4` (28,5 s, voz original al 120 %).
 
 **Portada (1080×1920, texto en la zona central 1080×1350):** fondo Pizarra, monograma naranja grande, texto en Red Hat Display Black, en Niebla: "Por qué existe **Senda**" ("Senda" en naranja).
 
