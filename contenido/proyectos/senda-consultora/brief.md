@@ -38,6 +38,25 @@
 | Instagram carrusel | [DATO] | Secundaria (reutiliza guiones de reels) |
 | Instagram stories | [DATO] | Media |
 
+## Identidad visual
+Fuente: LEEME del kit de logo (los archivos del logo todavía no llegaron: [DATO: subir PNG/SVG]).
+
+| Color | HEX | Uso en reels y piezas |
+|---|---|---|
+| Pizarra | `#16232B` | Fondo principal de placas y portadas; texto sobre fondos claros |
+| Niebla | `#E4EEF0` | Texto sobre fondos oscuros; cajas de texto sobre b-roll |
+| Verde mar | `#075056` | Fondo secundario (placa final, bloques), subrayados |
+| Naranja | `#FF5B04` | Acento: palabra clave, número, CTA. Usar poco |
+
+**Tipografía:** Red Hat Display (títulos, Bold/Black) y Red Hat Text (subtítulos y textos largos). Ambas de Google Fonts: instalarlas en la compu y en CapCut/Canva.
+
+**Reglas para reels:**
+- Texto en pantalla en Red Hat Display Bold, en caja Niebla con texto Pizarra (o al revés) para que se lea sobre cualquier imagen.
+- Naranja solo para resaltar **una** palabra o número por pantalla y el CTA. Nunca texto naranja sobre Niebla: no se lee bien (contraste bajo).
+- Placa final: fondo Pizarra o Verde mar, logo en Niebla, CTA en Naranja.
+- Zona segura 9:16: no poner texto en el 20 % inferior ni pegado al borde derecho (ahí van la descripción y los botones de Instagram).
+- Imágenes de apoyo con tonos fríos/neutros para que combinen con la paleta.
+
 ## Recursos disponibles
 - **Etapa 1 (actual): sin rostro.** Nadie aparece a cámara. Se trabaja con texto en pantalla, voz en off, manos/planos POV, grabaciones de pantalla y b-roll (propio o de bancos libres como Pexels o el de CapCut).
 - **Etapa 2:** aparece el fundador a cámara y, de forma progresiva, Ceci (sketches, dinámicas de a dos).
