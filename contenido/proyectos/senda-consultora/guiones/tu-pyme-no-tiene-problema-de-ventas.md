@@ -2,7 +2,7 @@
 
 - **Proyecto:** Senda Consultora
 - **Idea de origen:** ideas/2026-10-14.md #2
-- **Estado:** BORRADOR v2 (sin rostro)
+- **Estado:** APROBADO
 - **Objetivo / CTA:** Que manden VENTAS por DM para pedir el diagnóstico gratuito.
 - **Formato:** Reel 9:16, ~35 s. Voz en off + b-roll de manos y objetos + texto grande en pantalla.
 

@@ -2,7 +2,7 @@
 
 - **Proyecto:** Senda Consultora
 - **Idea de origen:** ideas/2026-10-14.md #3
-- **Estado:** BORRADOR v2 (sin rostro)
+- **Estado:** APROBADO
 - **Objetivo / CTA:** Alcance (que lo compartan y etiqueten) + DM para el diagnóstico.
 - **Formato:** Reel POV, 9:16, ~25 s. Se graba en primera persona (cámara a la altura del pecho o en la frente): solo se ven manos y escritorio. Cortes rápidos al ritmo de la música.
 

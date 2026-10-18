@@ -1,5 +1,9 @@
-# Calendario de contenidos – Senda Consultora – BORRADOR
-Supuestos a confirmar: inicio el **lunes 26/10/2026**, **3 reels por semana** (lunes, miércoles y viernes) e historias los martes y jueves. Ideas 6–12 pendientes de aprobación.
+# Calendario de contenidos – Senda Consultora – CONFIRMADO
+Inicio el **lunes 26/10/2026**, **3 reels por semana** (lunes, miércoles y viernes) e historias los martes y jueves.
+
+**Cierre visual fijo de todos los reels:** la S del monograma se dibuja como un camino sobre fondo Pizarra y se arma el logo vertical `negativo` (~2 s). Se hace una vez como plantilla y se reutiliza.
+
+**Horario inicial (hipótesis a testear):** 12:30 h o 19:30 h (hora de Argentina). A las 3 semanas se ajusta según las estadísticas de Instagram ("Cuándo está activo tu público").
 
 | Semana | Lunes | Miércoles | Viernes |
 |---|---|---|---|

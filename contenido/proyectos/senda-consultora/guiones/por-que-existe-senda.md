@@ -2,7 +2,7 @@
 
 - **Proyecto:** Senda Consultora
 - **Idea de origen:** ideas/2026-10-14.md #5
-- **Estado:** BORRADOR v2 (sin rostro; la versión personal a cámara pasa a la etapa 2)
+- **Estado:** APROBADO (falta [DATO] de experiencia en la escena 3)
 - **Objetivo / CTA:** Presentar la marca, generar confianza y que escriban por DM. Va fijado en el perfil.
 - **Formato:** Reel 9:16, ~40 s. Voz en off (tuya, en primera persona) + b-roll + texto en pantalla.
 

@@ -2,7 +2,7 @@
 
 - **Proyecto:** Senda Consultora
 - **Idea de origen:** ideas/2026-10-14.md #1
-- **Estado:** BORRADOR
+- **Estado:** APROBADO
 - **Objetivo / CTA:** Que comenten DIAGNÓSTICO para pedir el diagnóstico gratuito.
 - **Formato principal:** Reel sin rostro (abajo, versión carrusel como reutilización)
 

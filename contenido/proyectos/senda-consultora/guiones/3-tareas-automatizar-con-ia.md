@@ -2,7 +2,7 @@
 
 - **Proyecto:** Senda Consultora
 - **Idea de origen:** ideas/2026-10-14.md #4
-- **Estado:** BORRADOR
+- **Estado:** APROBADO
 - **Objetivo / CTA:** Que lo guarden + que escriban IA por DM.
 - **Formato principal:** Reel sin rostro (abajo, versión carrusel como reutilización)
 
