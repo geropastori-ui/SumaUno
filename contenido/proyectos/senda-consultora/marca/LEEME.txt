@@ -1,0 +1,7 @@
+Senda Consultora · Logo
+
+svg/ : vectores para web, impresión y diseño.
+png/ : imágenes con fondo transparente (2400 px de ancho; monograma 1024 px).
+
+Colores: Pizarra #16232B · Niebla #E4EEF0 · Verde mar #075056 · Naranja #FF5B04
+Tipografía: Red Hat Display y Red Hat Text (Google Fonts).

@@ -39,7 +39,26 @@
 | Instagram stories | [DATO] | Media |
 
 ## Identidad visual
-Fuente: LEEME del kit de logo (los archivos del logo todavía no llegaron: [DATO: subir PNG/SVG]).
+Kit de logo en `marca/` (SVG para diseño, PNG transparentes) y vista previa en `marca/vista-previa.png`.
+
+**El monograma es una "S" que también se lee como un camino que dobla: la senda.** Es el recurso visual más fuerte de la marca y conviene animarlo (que se "dibuje" como un recorrido) en las placas finales.
+
+| Versión | Archivo | Uso |
+|---|---|---|
+| Principal (horizontal) | `senda-principal-*` | Portadas de carrusel, placas finales anchas |
+| Vertical | `senda-vertical-*` | Placa final de reels (9:16), historias |
+| Corta (sin "Consultora") | `senda-corta-*` | Marca de agua chica, cabeceras |
+| Monograma (la S) | `senda-monograma-*` | Foto de perfil, marca de agua en esquina, animación de cierre |
+
+| Variante | Fondo |
+|---|---|
+| `positivo` | Niebla o claros (texto Pizarra + S naranja) |
+| `negativo` | Pizarra (texto Niebla + S naranja) |
+| `sobre-verde` | Verde mar (todo en Niebla) |
+| `sobre-naranja` | Naranja (todo en Pizarra) |
+| `mono-*` | Una tinta (blanco, negro o Pizarra) sobre fotos o impresión |
+
+**Foto de perfil de Instagram:** monograma `positivo` (S naranja) centrado sobre fondo Pizarra.
 
 | Color | HEX | Uso en reels y piezas |
 |---|---|---|
