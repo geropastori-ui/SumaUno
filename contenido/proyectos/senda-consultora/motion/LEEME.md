@@ -7,11 +7,13 @@ Videos hechos con **HyperFrames** (HeyGen): cada video es un HTML animado con GS
 | #5 · Por qué existe Senda | `reel-05-por-que-existe-senda/` | `senda-reel-05-por-que-existe-senda.mp4` (1080×1920, 30 fps, 40 s, sin audio) |
 
 ## Reel #5 · Hoja de tiempos para grabar la voz en off
+Guion completo para grabar (con ganchos alternativos y tips): `reel-05-guion-voz.md`.
+
 Grabá cada frase para que **empiece** en el segundo indicado (en CapCut alcanza con correr el clip de audio). Si una frase te queda más larga, avisame y estiro esa escena.
 
 | Desde | Hasta | Escena en pantalla | Voz en off |
 |---|---|---|---|
-| 0:00 | 0:04 | "No es falta de clientes." | "La mayoría de las pymes no se estancan por falta de clientes." |
+| 0:00 | 0:04 | "Si tu pyme no crece… No es falta de clientes." | "Si tu pyme no crece, el problema no son los clientes." |
 | 0:04 | 0:08 | Diagrama: todo converge en el DUEÑO | "Se estancan porque todo pasa por el dueño," |
 | 0:08 | 0:11,5 | Barras con signos de pregunta | "los números no están claros" |
 | 0:11,5 | 0:15 | Apps que caen y se apilan | "y cada herramienta nueva suma más caos." |
