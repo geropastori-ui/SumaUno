@@ -16,7 +16,7 @@ Los segundos indican dónde tiene que **empezar** cada frase para que coincida c
 | **0:27,5** | "Crecer no es correr más." | "Porque crecer no es correr más. //" |
 | **0:29,4** | "Es tener un camino claro." | "Es tener un **camino claro**." |
 | **0:32** | La S se dibuja → logo | (silencio o respiración: dejá que se vea el logo) |
-| **0:34** | "Diagnóstico gratuito / Escribime por DM / Recién arrancamos · Seguinos" | "Arrancamos con un **diagnóstico gratuito**: / lo miramos juntos y vemos por dónde empezar. / Escribime por privado… / y seguinos, que esto recién empieza." |
+| **0:34** | "Diagnóstico gratuito / Agendá tu consulta / Seguinos" | "Arrancamos con un **diagnóstico gratuito**: / lo miramos juntos y vemos por dónde empezar. / Escribime por privado… / y seguinos, que esto recién empieza." |
 
 ## Texto corrido (para leer de un tirón)
 > Si tu pyme no crece, el problema no son los clientes. El problema es que todo, absolutamente todo, pasa por vos. Los números no están claros… y cada herramienta nueva que sumás suma más caos.
