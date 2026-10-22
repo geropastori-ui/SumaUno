@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Carrusel · Suicidio en la ciudad de Santa Fe</title>
+<style>
+  @font-face { font-family: "RHD"; font-weight: 500; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-display-latin-500-normal.woff2"); }
+  @font-face { font-family: "RHD"; font-weight: 700; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-display-latin-700-normal.woff2"); }
+  @font-face { font-family: "RHD"; font-weight: 900; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-display-latin-900-normal.woff2"); }
+  @font-face { font-family: "RHT"; font-weight: 400; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-text-latin-400-normal.woff2"); }
+  @font-face { font-family: "RHT"; font-weight: 500; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-text-latin-500-normal.woff2"); }
+  @font-face { font-family: "RHT"; font-weight: 700; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-text-latin-700-normal.woff2"); }
+  :root { --pizarra:#16232B; --niebla:#E4EEF0; --verde:#075056; --naranja:#FF5B04; --muted:rgba(228,238,240,.68); --faint:rgba(228,238,240,.32); --line:rgba(228,238,240,.14); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0c1317; font-family:"RHT",sans-serif; color:var(--niebla); display:flex; flex-direction:column; gap:40px; padding:40px; align-items:center; }
+  .slide { position:relative; width:1080px; height:1350px; background:var(--pizarra); overflow:hidden; padding:110px 96px 120px; display:flex; flex-direction:column; }
+  .mark { position:absolute; right:84px; top:84px; width:42px; }
+  .pager { position:absolute; left:96px; bottom:64px; font:500 26px "RHT"; color:var(--faint); letter-spacing:.06em; }
+  .handle { position:absolute; right:96px; bottom:64px; font:500 26px "RHT"; color:var(--faint); }
+  .eyebrow { font:700 30px "RHT"; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:28px; }
+  .eyebrow .n { color:var(--naranja); }
+  h1 { font:900 92px/1.0 "RHD"; letter-spacing:-.03em; }
+  h2 { font:900 72px/1.04 "RHD"; letter-spacing:-.025em; }
+  p.lead { font:500 40px/1.35 "RHT"; color:var(--muted); margin-top:36px; max-width:860px; }
+  p.body { font:400 38px/1.4 "RHT"; color:var(--niebla); margin-top:30px; max-width:880px; }
+  .em { color:var(--niebla); font-weight:700; }
+  .acc { color:var(--naranja); }
+  .help { margin-top:auto; border-top:2px solid var(--line); padding-top:28px; font:500 28px/1.4 "RHT"; color:var(--muted); }
+  .help b { color:var(--niebla); font-weight:700; }
+  .chart { margin-top:48px; flex:1; position:relative; }
+  .caption { font:400 26px/1.4 "RHT"; color:var(--faint); margin-top:18px; }
+  .pending { border:3px dashed var(--faint); border-radius:20px; height:100%; display:flex; align-items:center; justify-content:center; text-align:center; font:700 34px/1.3 "RHT"; color:var(--faint); padding:40px; }
+  .dato { color:var(--naranja); border-bottom:3px dashed var(--naranja); }
+  .hero { font:900 230px/0.9 "RHD"; letter-spacing:-.04em; margin-top:40px; }
+  .hero small { font:700 64px "RHD"; letter-spacing:-.02em; }
+  .split { display:flex; height:84px; border-radius:14px; overflow:hidden; gap:4px; margin-top:44px; }
+  .split div { display:flex; align-items:center; padding:0 26px; font:700 30px "RHT"; }
+  .list { margin-top:44px; display:flex; flex-direction:column; gap:30px; }
+  .item { display:flex; gap:26px; align-items:flex-start; font:500 37px/1.35 "RHT"; }
+  .item .dot { flex:0 0 18px; height:18px; border-radius:50%; background:var(--naranja); margin-top:16px; }
+  .lines { margin-top:44px; display:flex; flex-direction:column; gap:22px; }
+  .line-card { background:rgba(7,80,86,.55); border-radius:24px; padding:30px 36px; }
+  .line-card .who { font:700 28px "RHT"; color:var(--muted); letter-spacing:.02em; }
+  .line-card .num { font:900 64px/1.1 "RHD"; letter-spacing:-.01em; margin-top:6px; }
+  .line-card .det { font:500 28px "RHT"; color:var(--muted); margin-top:4px; }
+  .line-card.main { background:var(--niebla); color:var(--pizarra); }
+  .line-card.main .who, .line-card.main .det { color:rgba(22,35,43,.75); }
+  .cover h1 { font-size:118px; margin-top:auto; }
+  .cover .band { margin-top:56px; background:var(--niebla); color:var(--pizarra); border-radius:22px; padding:28px 34px; font:700 32px/1.35 "RHT"; }
+  .logo { height:56px; margin-top:30px; }
+</style>
+</head>
+<body>
+<div id="slides"></div>
+<script>
+const MARK = `<svg class="mark" viewBox="0 0 680 840"><path fill="#FF5B04" d="M320 0 L680 0 L680 210 L320 210 Z M320 0 A210 210 0 0 0 320 420 Z M360 840 L0 840 L0 630 L360 630 Z M360 840 A210 210 0 0 0 360 420 Z"/></svg>`;
+const D = (v, alt) => (v === null || v === undefined || v === "" ? `<span class="dato">${alt || "[DATO]"}</span>` : v);
+const fmt = (x) => String(Math.round(x * 10) / 10).replace(".", ",");
+
+function lineChart(serie) {
+  if (!serie.length) return `<div class="pending">Gráfico de evolución<br>(tasa cada 100.000 hab. por año)<br>— datos pendientes —</div>`;
+  const W = 888, H = 600, L = 70, R = 70, T = 70, B = 70;
+  const ys = serie.map(d => d.tasa), max = Math.max(...ys) * 1.15, min = 0;
+  const x = i => L + (W - L - R) * (serie.length === 1 ? 0.5 : i / (serie.length - 1));
+  const y = v => T + (H - T - B) * (1 - (v - min) / (max - min));
+  const grid = [0, 0.5, 1].map(f => { const v = min + (max - min) * f; return `<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="rgba(228,238,240,.14)" stroke-width="2"/><text x="${L-14}" y="${y(v)+9}" text-anchor="end" font-family="RHT" font-size="26" fill="rgba(228,238,240,.45)">${fmt(v)}</text>`; }).join("");
+  const path = serie.map((d, i) => `${i ? "L" : "M"}${x(i)} ${y(d.tasa)}`).join(" ");
+  const pts = serie.map((d, i) => `<circle cx="${x(i)}" cy="${y(d.tasa)}" r="${i === serie.length-1 ? 11 : 7}" fill="#E4EEF0" stroke="#16232B" stroke-width="4"/>`).join("");
+  const yearsL = serie.map((d, i) => `<text x="${x(i)}" y="${H-24}" text-anchor="middle" font-family="RHT" font-size="26" fill="rgba(228,238,240,.6)">${d.anio}</text>`).join("");
+  const first = serie[0], last = serie[serie.length-1];
+  const lab = (d, i, anchor) => `<text x="${x(i)}" y="${y(d.tasa)-26}" text-anchor="${anchor}" font-family="RHD" font-weight="900" font-size="40" fill="#E4EEF0">${fmt(d.tasa)}</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%">${grid}<path d="${path}" fill="none" stroke="#E4EEF0" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>${pts}${lab(first,0,"start")}${lab(last,serie.length-1,"end")}${yearsL}</svg>`;
+}
+
+function barChart(edades, dest) {
+  if (!edades.length) return `<div class="pending">Gráfico por grupo de edad<br>(% del total)<br>— datos pendientes —</div>`;
+  const W = 888, rowH = 92, gap = 26, labW = 170;
+  const max = Math.max(...edades.map(e => e.pct));
+  const rows = edades.map((e, i) => {
+    const yy = i * (rowH + gap), w = (W - labW - 150) * e.pct / max, hi = e.grupo === dest;
+    return `<text x="0" y="${yy+rowH/2+11}" font-family="RHT" font-weight="700" font-size="32" fill="${hi ? "#E4EEF0" : "rgba(228,238,240,.6)"}">${e.grupo}</text>
+      <rect x="${labW}" y="${yy}" width="${Math.max(w,4)}" height="${rowH}" rx="8" fill="${hi ? "#E4EEF0" : "rgba(228,238,240,.28)"}"/>
+      <text x="${labW + w + 18}" y="${yy+rowH/2+13}" font-family="RHD" font-weight="900" font-size="38" fill="${hi ? "#E4EEF0" : "rgba(228,238,240,.6)"}">${fmt(e.pct)} %</text>`;
+  }).join("");
+  const H = edades.length * (rowH + gap);
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%">${rows}</svg>`;
+}
+
+function render(d) {
+  const per = D(d.periodo, "[PERÍODO]"), src = D(d.fuente, "[FUENTE]");
+  const s = d.tasa_por_anio, first = s[0], last = s[s.length-1];
+  const v = d.varones_pct;
+  const help = `<div class="help">¿Necesitás hablar? <b>Línea de Salud Mental 0800 999 0091</b> · gratis, 24 h</div>`;
+  const slides = [
+  `<div class="slide cover">${MARK}
+     <div class="eyebrow">Santa Fe · Datos de salud pública</div>
+     <h1>Suicidio en la ciudad de Santa&nbsp;Fe</h1>
+     <p class="lead">Qué muestran los datos y por qué es un tema que nos involucra a todos.</p>
+     <div class="band">¿Necesitás hablar con alguien? Línea de Salud Mental 0800 999 0091 · gratis, las 24 h</div></div>`,
+  `<div class="slide">${MARK}
+     <div class="eyebrow">Antes de empezar</div>
+     <h2>Hablar del tema con cuidado ayuda a prevenir</h2>
+     <p class="body">Hablar del suicidio de forma responsable <span class="em">no aumenta el riesgo</span>: abre la puerta a pedir ayuda.</p>
+     <p class="body">Compartimos estos datos para entender el problema y pensar entre todos cómo prevenirlo.</p>${help}</div>`,
+  `<div class="slide">${MARK}
+     <div class="eyebrow"><span class="n">01</span> · Evolución</div>
+     <h2>La tasa viene en aumento</h2>
+     <p class="lead" style="margin-top:22px">${s.length ? `Pasó de <span class="em">${fmt(first.tasa)}</span> a <span class="em">${fmt(last.tasa)}</span> muertes cada 100.000 habitantes entre ${first.anio} y ${last.anio}.` : `Pasó de ${D(null)} a ${D(null)} muertes cada 100.000 habitantes entre ${D(null,"[AÑO]")} y ${D(null,"[AÑO]")}.`}</p>
+     <div class="chart">${lineChart(s)}</div>
+     <div class="caption">Tasa de mortalidad por suicidio cada 100.000 habitantes, ${d.ambito}. Fuente: ${src}.</div></div>`,
+  `<div class="slide">${MARK}
+     <div class="eyebrow"><span class="n">02</span> · Perfil</div>
+     <h2>La mayoría son varones</h2>
+     <div class="hero">${v == null ? D(null,"[X]") : Math.round(v/10)}<small> de cada 10</small></div>
+     <p class="lead">personas que murieron por suicidio en ${per} eran varones.</p>
+     <div class="split">${v == null ? `<div style="flex:1;background:rgba(228,238,240,.12);color:var(--faint)">Proporción varones / mujeres — dato pendiente</div>` :
+       `<div style="flex:${v};background:#E4EEF0;color:#16232B">Varones ${fmt(v)} %</div><div style="flex:${100-v};background:rgba(228,238,240,.28);color:#E4EEF0">${fmt(100-v)} %</div>`}</div>
+     <div class="caption">Fuente: ${src}.</div>${help}</div>`,
+  `<div class="slide">${MARK}
+     <div class="eyebrow"><span class="n">03</span> · Edad</div>
+     <h2>El grupo más afectado: jóvenes de ${d.grupo_destacado.replace("–"," a ")} años</h2>
+     <div class="chart">${barChart(d.edades, d.grupo_destacado)}</div>
+     <div class="caption">Porcentaje de muertes por suicidio según grupo de edad, ${d.ambito}, ${per}. Fuente: ${src}.</div></div>`,
+  `<div class="slide">${MARK}
+     <div class="eyebrow"><span class="n">04</span> · Una mirada más amplia</div>
+     <h2>No es un hecho aislado ni solo individual</h2>
+     <p class="body">Detrás de cada número hay una historia y <span class="em">muchos factores</span>: personales, familiares, sociales, económicos y de acceso a la salud.</p>
+     <p class="body">Por eso necesita un enfoque de <span class="em">salud pública</span>: prevención, detección temprana y redes de cuidado en toda la comunidad.</p>${help}</div>`,
+  `<div class="slide">${MARK}
+     <div class="eyebrow"><span class="n">05</span> · Qué podemos hacer</div>
+     <h2>Todos podemos ser parte de la prevención</h2>
+     <div class="list">
+       <div class="item"><span class="dot"></span><span>Preguntar cómo está, de verdad, y <b>escuchar sin juzgar</b>.</span></div>
+       <div class="item"><span class="dot"></span><span>Tomar en serio cualquier comentario sobre querer morir o desaparecer.</span></div>
+       <div class="item"><span class="dot"></span><span><b>Acompañar a buscar ayuda</b> profesional y no dejar sola a la persona si está en riesgo.</span></div>
+       <div class="item"><span class="dot"></span><span>Cuidarnos y cuidar a quienes nos rodean.</span></div>
+     </div>${help}</div>`,
+  `<div class="slide">${MARK}
+     <div class="eyebrow">Pedir ayuda está bien</div>
+     <h2>Si estás pasando un mal momento, hablá con alguien</h2>
+     <div class="lines">
+       <div class="line-card main"><div class="who">Línea Nacional de Salud Mental</div><div class="num">0800 999 0091</div><div class="det">Gratis · las 24 h · todo el país</div></div>
+       <div class="line-card"><div class="who">Emergencias</div><div class="num">107 · 911</div><div class="det">Si hay riesgo inmediato</div></div>
+       <div class="line-card"><div class="who">Provincia de Santa Fe · Salud Mental</div><div class="num">0800 555 6549</div><div class="det">También podés ir a la guardia del hospital público más cercano</div></div>
+     </div>
+     <div class="caption" style="margin-top:auto">Datos: ${src}.</div>
+     <img class="logo" style="align-self:flex-start" src="../../marca/svg/senda-principal-negativo.svg" alt="Senda Consultora"></div>`
+  ];
+  const n = slides.length;
+  document.getElementById("slides").innerHTML = slides.map((h, i) => h.replace("</div>", "</div>").replace(/<\/div>$/, `<div class="pager">${i+1} / ${n}</div></div>`)).join("");
+}
+fetch("datos.json").then(r => r.json()).then(render).catch(() => render(window.__DATOS__));
+</script>
+</body>
+</html>

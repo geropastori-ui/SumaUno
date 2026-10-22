@@ -1,0 +1,12 @@
+{
+  "_nota": "Completar con los datos reales. Mientras un campo esté vacío, el carrusel muestra [DATO] y el gráfico como pendiente.",
+  "ambito": "ciudad de Santa Fe",
+  "periodo": null,
+  "fuente": null,
+  "tasa_por_anio": [],
+  "_ejemplo_tasa_por_anio": [{"anio": 2019, "tasa": 0.0}, {"anio": 2020, "tasa": 0.0}],
+  "varones_pct": null,
+  "edades": [],
+  "_ejemplo_edades": [{"grupo": "15–24", "pct": 0}, {"grupo": "25–35", "pct": 0}, {"grupo": "36–50", "pct": 0}],
+  "grupo_destacado": "25–35"
+}
