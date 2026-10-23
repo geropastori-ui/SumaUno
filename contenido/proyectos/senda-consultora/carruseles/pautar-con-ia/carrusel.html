@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Carrusel · Pautar con IA</title>
+<style>
+  @font-face { font-family: "RHD"; font-weight: 500; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-display-latin-500-normal.woff2"); }
+  @font-face { font-family: "RHD"; font-weight: 700; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-display-latin-700-normal.woff2"); }
+  @font-face { font-family: "RHD"; font-weight: 900; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-display-latin-900-normal.woff2"); }
+  @font-face { font-family: "RHT"; font-weight: 400; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-text-latin-400-normal.woff2"); }
+  @font-face { font-family: "RHT"; font-weight: 500; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-text-latin-500-normal.woff2"); }
+  @font-face { font-family: "RHT"; font-weight: 700; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-text-latin-700-normal.woff2"); }
+  :root { --pizarra:#16232B; --niebla:#E4EEF0; --verde:#075056; --naranja:#FF5B04; --muted:rgba(228,238,240,.7); --faint:rgba(228,238,240,.34); --line:rgba(228,238,240,.14); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0c1317; color:var(--niebla); font-family:"RHT",sans-serif; display:flex; flex-direction:column; gap:40px; padding:40px; align-items:center; }
+  .slide { position:relative; width:1080px; height:1350px; background:var(--pizarra); overflow:hidden; padding:110px 96px 130px; display:flex; flex-direction:column; }
+  .mark { position:absolute; right:84px; top:84px; width:42px; z-index:2; }
+  .pager { position:absolute; left:96px; bottom:64px; font:500 26px "RHT"; color:var(--faint); letter-spacing:.06em; }
+  .swipe { position:absolute; right:96px; bottom:58px; font:700 30px "RHT"; color:var(--naranja); }
+  .eyebrow { font:700 30px "RHT"; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:28px; }
+  .eyebrow .n { color:var(--naranja); }
+  h1 { font:900 112px/0.98 "RHD"; letter-spacing:-.035em; }
+  h2 { font:900 74px/1.03 "RHD"; letter-spacing:-.025em; }
+  .o { color:var(--naranja); }
+  p.lead { font:500 40px/1.35 "RHT"; color:var(--muted); margin-top:34px; max-width:880px; }
+  p.body { font:400 37px/1.4 "RHT"; margin-top:28px; max-width:880px; }
+  b, .em { font-weight:700; color:var(--niebla); }
+  /* portada */
+  .cover h1 { margin-top:auto; }
+  .chip { display:inline-flex; align-items:center; gap:14px; align-self:flex-start; background:rgba(7,80,86,.9); border-radius:999px; padding:14px 26px; font:700 28px "RHT"; }
+  .chip i { width:14px; height:14px; border-radius:50%; background:var(--naranja); display:inline-block; }
+  /* comparación */
+  .vs { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:48px; }
+  .card { border-radius:28px; padding:40px 36px; display:flex; flex-direction:column; gap:22px; }
+  .card.chat { background:rgba(228,238,240,.07); border:2px solid var(--line); }
+  .card.agent { background:var(--niebla); color:var(--pizarra); }
+  .card .tag { font:700 26px "RHT"; letter-spacing:.1em; text-transform:uppercase; opacity:.7; }
+  .card .ttl { font:900 54px/1 "RHD"; letter-spacing:-.02em; }
+  .card ul { list-style:none; display:flex; flex-direction:column; gap:20px; margin-top:8px; }
+  .card li { font:500 32px/1.3 "RHT"; padding-left:34px; position:relative; }
+  .card li::before { content:""; position:absolute; left:0; top:14px; width:14px; height:14px; border-radius:50%; background:currentColor; opacity:.45; }
+  .card.agent li::before { background:var(--naranja); opacity:1; }
+  /* conversación */
+  .bubble { align-self:flex-end; max-width:780px; background:var(--naranja); color:var(--pizarra); border-radius:34px 34px 8px 34px; padding:30px 36px; font:700 36px/1.3 "RHT"; margin-top:44px; }
+  .bubble small { display:block; font:700 24px "RHT"; letter-spacing:.08em; text-transform:uppercase; opacity:.7; margin-bottom:8px; }
+  .steps { margin-top:36px; display:flex; flex-direction:column; gap:0; }
+  .step { display:flex; gap:26px; align-items:center; position:relative; padding:14px 0; }
+  .step .k { flex:0 0 60px; height:60px; border-radius:50%; border:3px solid var(--niebla); display:flex; align-items:center; justify-content:center; font:900 28px "RHD"; background:var(--pizarra); z-index:1; }
+  .step .t { font:500 34px/1.3 "RHT"; }
+  .steps::before { content:""; position:absolute; }
+  .steps { position:relative; }
+  .steps .rail { position:absolute; left:29px; top:40px; bottom:40px; width:3px; background:var(--line); }
+  .step.done .k { background:var(--niebla); color:var(--pizarra); }
+  .reply { align-self:flex-start; max-width:780px; background:rgba(7,80,86,.95); border-radius:34px 34px 34px 8px; padding:26px 34px; font:700 34px/1.3 "RHT"; margin-top:26px; }
+  .reply small { display:block; font:700 24px "RHT"; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
+  /* listas numeradas */
+  .nlist { margin-top:44px; display:flex; flex-direction:column; gap:22px; }
+  .row { display:flex; gap:28px; align-items:center; background:rgba(228,238,240,.06); border-radius:24px; padding:26px 30px; }
+  .row .num { flex:0 0 74px; font:900 54px "RHD"; color:var(--naranja); letter-spacing:-.02em; }
+  .row .tx { font:500 34px/1.3 "RHT"; }
+  .row .tx b { display:block; font:700 36px "RHT"; margin-bottom:4px; }
+  /* riesgos */
+  .warn { margin-top:40px; display:flex; flex-direction:column; gap:26px; }
+  .warn .it { display:flex; gap:24px; font:500 35px/1.35 "RHT"; }
+  .warn .it span.x { flex:0 0 46px; height:46px; border-radius:12px; background:rgba(255,91,4,.16); color:var(--naranja); display:flex; align-items:center; justify-content:center; font:900 30px "RHD"; margin-top:2px; }
+  .rule { margin-top:auto; background:var(--niebla); color:var(--pizarra); border-radius:26px; padding:34px 40px; font:900 50px/1.1 "RHD"; letter-spacing:-.02em; }
+  .rule small { display:block; font:700 24px "RHT"; letter-spacing:.1em; text-transform:uppercase; opacity:.65; margin-bottom:10px; }
+  /* cierre */
+  .cta-btn { align-self:flex-start; margin-top:48px; background:var(--naranja); color:var(--pizarra); border-radius:999px; padding:30px 52px; font:900 48px "RHD"; }
+  .logo { height:58px; margin-top:auto; align-self:flex-start; }
+  .foot { font:500 30px/1.4 "RHT"; color:var(--muted); margin-top:28px; }
+
+  .photo { position:absolute; inset:0; background-size:cover; background-position:center; }
+  .shade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(22,35,43,.92) 0%, rgba(22,35,43,.55) 38%, rgba(22,35,43,.25) 60%, rgba(22,35,43,.9) 100%); }
+  .over { position:relative; z-index:1; display:flex; flex-direction:column; height:100%; }
+  .tophalf { position:absolute; left:0; right:0; top:0; height:560px; background-size:cover; background-position:center 40%; }
+  .tophalf::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(22,35,43,0) 40%, #16232B 100%); }
+  .pills { display:flex; align-items:center; gap:0; margin-top:70px; }
+  .pills .p { flex:1; height:170px; border-radius:44px; display:flex; align-items:center; justify-content:center; font:900 60px "RHD"; letter-spacing:-.02em; }
+  .pills .p.a { background:var(--niebla); color:var(--pizarra); }
+  .pills .p.b { background:var(--verde); }
+  .pills .k { flex:0 0 120px; position:relative; height:8px; background:var(--naranja); }
+  .pills .k::after { content:""; position:absolute; left:34px; top:-22px; width:52px; height:52px; border-radius:50%; background:var(--naranja); }
+  .note { font:500 28px "RHT"; color:var(--muted); margin-top:28px; }
+  .campaign { margin-top:34px; background:var(--niebla); color:var(--pizarra); border-radius:32px; padding:34px 40px; }
+  .campaign .t { font:900 44px "RHD"; margin-bottom:12px; }
+  .crow { display:flex; justify-content:space-between; font:500 34px "RHT"; padding:16px 0; border-top:2px solid rgba(22,35,43,.12); }
+  .crow b { font-weight:700; color:var(--pizarra); }
+  .barsv { display:flex; align-items:flex-end; gap:36px; height:380px; margin-top:44px; padding:0 10px; }
+  .barsv div { flex:1; border-radius:16px 16px 4px 4px; background:rgba(228,238,240,.28); position:relative; }
+  .barsv div.hi { background:var(--niebla); }
+  .barsv div span { position:absolute; bottom:-50px; left:0; right:0; text-align:center; font:700 28px "RHT"; color:var(--muted); }
+  .compare { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:auto; }
+  .compare .c { border-radius:26px; padding:30px 30px; }
+  .compare .c.antes { background:rgba(228,238,240,.07); border:2px solid var(--line); }
+  .compare .c.ahora { background:var(--niebla); color:var(--pizarra); }
+  .compare .tag { font:700 24px "RHT"; letter-spacing:.1em; text-transform:uppercase; opacity:.7; }
+  .compare .tx { font:700 34px/1.3 "RHT"; margin-top:12px; }
+  .toggle { display:flex; align-items:center; gap:30px; margin-top:40px; }
+  .sw { width:200px; height:96px; border-radius:48px; background:rgba(228,238,240,.2); position:relative; }
+  .sw i { position:absolute; left:10px; top:10px; width:76px; height:76px; border-radius:50%; background:var(--niebla); }
+  .toggle span { font:700 36px "RHT"; color:var(--muted); }
+</style>
+</head>
+<body>
+<div id="slides">
+
+<div class="slide cover" style="padding:0">
+  <div class="photo" style="background-image:url(img/portada.png)"></div><div class="shade"></div>
+  <div class="over" style="padding:110px 96px 130px">
+    <div class="chip"><i></i>IA + Publicidad</div>
+    <h1 style="margin-top:40px">Esto cambia las <span class="o">reglas del juego</span></h1>
+    <p class="lead" style="margin-top:22px;color:var(--niebla)">de la publicidad para pymes.</p>
+    <div class="swipe">Deslizá →</div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="eyebrow"><span class="n">01</span> · La noticia</div>
+  <h2>Meta conectó sus anuncios con ChatGPT</h2>
+  <div class="pills"><div class="p a">Meta Ads</div><div class="k"></div><div class="p b">ChatGPT</div></div>
+  <p class="body" style="margin-top:70px">Ahora una campaña de Instagram o Facebook se puede <b>crear, ajustar y analizar conversando</b> con la IA. También funciona con Claude.</p>
+  <p class="note">Beta abierta desde abril de 2026.</p>
+</div>
+
+<div class="slide">
+  <div class="eyebrow"><span class="n">02</span> · Cómo funciona</div>
+  <h2>Le pedís la campaña. <span class="o">La arma.</span></h2>
+  <div class="bubble"><small>Vos</small>"Campaña para mis viandas, $10.000 por día, para gente de Santa Fe."</div>
+  <div class="campaign"><div class="t">Campaña lista · en pausa</div>
+    <div class="crow"><span>Objetivo</span><b>Ventas</b></div>
+    <div class="crow"><span>Presupuesto</span><b>$10.000 / día</b></div>
+    <div class="crow"><span>Público</span><b>Santa Fe</b></div>
+    <div class="crow"><span>Anuncios</span><b>3 versiones</b></div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="eyebrow"><span class="n">03</span> · Los resultados</div>
+  <h2>Y te explica qué funciona, <span class="o">en criollo</span></h2>
+  <div class="bubble"><small>Vos</small>"¿Qué anuncio me está funcionando mejor?"</div>
+  <div class="barsv"><div style="height:42%"><span>Anuncio 1</span></div><div class="hi" style="height:96%"><span>Anuncio 2</span></div><div style="height:58%"><span>Anuncio 3</span></div></div>
+  <div class="reply" style="margin-top:80px"><small>IA</small>El 2: te trae más consultas por menos plata. ¿Le paso más presupuesto?</div>
+</div>
+
+<div class="slide" style="padding-top:0">
+  <div class="tophalf" style="background-image:url(img/manos-celular.png)"></div>
+  <div style="height:520px"></div>
+  <div class="eyebrow" style="position:relative"><span class="n">04</span> · Qué cambia</div>
+  <h2 style="position:relative">De configurar a <span class="o">conversar</span></h2>
+  <div class="compare" style="margin-top:44px">
+    <div class="c antes"><div class="tag">Antes</div><div class="tx">Menús, segmentaciones y decenas de opciones en el Administrador de anuncios.</div></div>
+    <div class="c ahora"><div class="tag">Ahora</div><div class="tx">Un mensaje bien escrito: qué querés, para quién y cuánto.</div></div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="eyebrow"><span class="n">05</span> · La clave</div>
+  <h2>Ya no gana el que sabe configurar. Gana el que sabe <span class="o">pedir.</span></h2>
+  <div class="nlist">
+    <div class="row"><div class="num">1</div><div class="tx"><b>Qué querés lograr</b>Ventas, consultas por WhatsApp, visitas al local.</div></div>
+    <div class="row"><div class="num">2</div><div class="tx"><b>A quién y dónde</b>Tu cliente ideal y tu zona.</div></div>
+    <div class="row"><div class="num">3</div><div class="tx"><b>Cuánto y hasta cuándo</b>Presupuesto diario y fecha de corte.</div></div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="eyebrow"><span class="n">06</span> · Ojo con esto</div>
+  <h2>Lo que le pedís, se ejecuta de verdad</h2>
+  <div class="toggle"><div class="sw"><i></i></div><span>Pausado</span></div>
+  <div class="warn">
+    <div class="it"><span class="x">!</span><span>Pedile que arme todo <b>en pausa</b>.</span></div>
+    <div class="it"><span class="x">!</span><span><b>Revisá</b> textos, público y presupuesto antes de activar.</span></div>
+    <div class="it"><span class="x">!</span><span>Poné un <b>tope de gasto</b> desde el primer día.</span></div>
+  </div>
+  <div class="rule"><small>La regla</small>La IA arma. <span class="o">Vos activás.</span></div>
+</div>
+
+<div class="slide">
+  <div class="eyebrow">¿Querés probarlo?</div>
+  <h2>Te pasamos el paso a paso para conectarlo</h2>
+  <p class="lead">Cómo vincular tu cuenta publicitaria de Meta con ChatGPT o Claude, sin ser experto.</p>
+  <div class="cta-btn">Comentá PAUTA</div>
+  <p class="foot">Guardalo para tu próxima campaña 🔖<br>Seguinos: la publicidad está cambiando todas las semanas.</p>
+  <img class="logo" src="../../marca/svg/senda-principal-negativo.svg" alt="Senda Consultora">
+</div>
+
+</div>
+<script>
+const MARK = '<svg class="mark" viewBox="0 0 680 840"><path fill="#FF5B04" d="M320 0 L680 0 L680 210 L320 210 Z M320 0 A210 210 0 0 0 320 420 Z M360 840 L0 840 L0 630 L360 630 Z M360 840 A210 210 0 0 0 360 420 Z"/></svg>';
+const all = [...document.querySelectorAll(".slide")];
+all.forEach((s, i) => { s.insertAdjacentHTML("afterbegin", MARK); s.insertAdjacentHTML("beforeend", `<div class="pager">${i + 1} / ${all.length}</div>`); });
+</script>
+</body>
+</html>
