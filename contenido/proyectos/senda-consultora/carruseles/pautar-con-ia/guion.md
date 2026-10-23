@@ -1,42 +1,44 @@
-# Carrusel · Esto cambia las reglas del juego de la publicidad (pautar con IA)
+# Carrusel · Esto cambia las reglas del juego (pautar con IA)
 
 - **Proyecto:** Senda Consultora
-- **Idea de origen:** ideas/2026-10-23-ia.md #18 (el usuario prefirió carrusel en lugar de reel)
-- **Estado:** BORRADOR — faltan las fotos en alta resolución
-- **Formato:** 8 slides de 1080×1350 (`png/`), con fotos. Regenerar: `node render.mjs`.
-
-## Fotos (generadas con IA en Canva, sin marcas ni personas reales)
-| Archivo | Uso | Canva |
-|---|---|---|
-| `img/portada.png` | Slide 1: dueño de un local de viandas mirando el celular | https://www.canva.com/M/MAHY3bMZRg8 |
-| `img/manos-celular.png` | Slide 5: manos escribiendo en el celular, notebook con gráficos | https://www.canva.com/M/MAHY3Zh6OtI |
-
-Ahora están en miniatura (161×200 px): para publicar hay que descargarlas desde Canva en alta y reemplazar esos dos archivos (mismo nombre).
+- **Idea de origen:** ideas/2026-10-23-ia.md #18 (pasó de reel a carrusel)
+- **Estado:** BORRADOR v2 — 100 % gráfico (sin fotos, a pedido del usuario)
+- **Formato:** 9 slides de 1080×1350 (`png/`). Regenerar: `node render.mjs`.
 
 ## Slides
-1. **Portada con foto:** "Esto cambia las reglas del juego de la publicidad para pymes." · Deslizá →
-2. **01 · La noticia:** Meta Ads 🤝 ChatGPT. Crear, ajustar y analizar campañas conversando; también con Claude. Beta abierta desde abril de 2026.
-3. **02 · Cómo funciona:** pedido por chat → "Campaña lista · en pausa" (objetivo, presupuesto, público, anuncios).
-4. **03 · Los resultados:** "¿Qué anuncio me funciona mejor?" → barras → "El 2… ¿le paso más presupuesto?"
-5. **04 · Qué cambia (con foto):** De configurar a conversar. Antes: menús y opciones. Ahora: un mensaje bien escrito.
-6. **05 · La clave:** "Ya no gana el que sabe configurar. Gana el que sabe pedir." Qué querés lograr · a quién y dónde · cuánto y hasta cuándo.
-7. **06 · Ojo con esto:** se ejecuta de verdad → en pausa, revisar, tope de gasto. "La IA arma. Vos activás."
-8. **Cierre:** "Te pasamos el paso a paso para conectarlo" · Comentá PAUTA · logo.
+1. **Portada ilustrada:** chat (naranja) enchufado a un panel de anuncios. "Esto cambia las reglas del juego" · "Meta conectó sus anuncios con ChatGPT y Claude. Te explicamos qué significa para tu pyme."
+2. **01 · Qué es:** diagrama Vos → ChatGPT o Claude → Conector de Meta Ads → Tu cuenta publicitaria (Facebook e Instagram). Beta abierta desde el 29/04/2026.
+3. **02 · Qué puede hacer:** 6 tarjetas con íconos: crear y editar · analizar resultados · armar públicos · manejar el catálogo · revisar el píxel · pruebas A/B.
+4. **03 · Qué cambia:** Antes, 9 pasos en el Administrador de anuncios. Ahora, 3: escribís → la IA arma el borrador → revisás y activás. "Ya no gana el que sabe configurar. Gana el que sabe pedir."
+5. **04 · Crear (ejemplo ilustrativo):** pedido por chat → borrador en pausa.
+6. **05 · Analizar (ejemplo ilustrativo):** "¿Cómo me fue esta semana?" → 3 indicadores + sugerencia de la IA.
+7. **06 · Cómo conectarlo:** 4 pasos (conectores → conector de Meta Ads → login con Facebook → permisos) + requisitos.
+8. **07 · Los permisos:** semáforo. Verde: reportes y análisis. Amarillo (con aprobación): crear en pausa, públicos. Naranja (siempre vos): activar y subir presupuestos. "La IA arma. Vos activás."
+9. **Cierre:** "Te ayudamos a conectarlo y a armar tu primera campaña" · diagnóstico gratuito · Comentá PAUTA · logo.
 
 ## Caption
 Esto cambia las reglas del juego de la publicidad 🔄
 
-Meta conectó su sistema de anuncios con ChatGPT y Claude: ahora una campaña de Instagram se puede crear, ajustar y analizar conversando.
+Meta lanzó un conector oficial para que ChatGPT y Claude trabajen dentro de tu cuenta de anuncios: crear campañas, analizar resultados, armar públicos y más, conversando.
+
+En el carrusel:
+→ qué es y cómo funciona
+→ las 6 cosas que ya puede hacer
+→ cómo conectarlo en 4 pasos
+→ el semáforo de permisos para no llevarte sorpresas
 
 Ya no gana el que sabe configurar. Gana el que sabe pedir.
 
-Deslizá para ver cómo funciona y el cuidado que no te podés saltear 👉
+Comentá PAUTA y te ayudamos a conectarlo 👇
 
-Comentá PAUTA y te pasamos el paso a paso para conectarlo.
+#MetaAds #InteligenciaArtificial #ChatGPT #Claude #Publicidad #Pymes
 
-#MetaAds #InteligenciaArtificial #ChatGPT #Publicidad #Pymes
-
-## Pendiente antes de publicar
-- Fotos en alta (ver arriba).
-- Armar el paso a paso que se promete a quien comente PAUTA.
-- Datos: ver la tabla de verificación en `../../guiones/ia-pautar-con-chatgpt.md`. Ejemplos de las slides 3 y 4 son ilustrativos.
+## Verificación (23/10/2026)
+| Afirmación | Fuente |
+|---|---|
+| Meta Ads AI Connectors: conector oficial (servidor MCP + CLI) para ChatGPT y Claude; beta abierta desde el 29/04/2026; anunciantes habilitados de todo el mundo | PPC Land, Digiday vía Let's Data Science, Mediainfoline |
+| Capacidades: creación y edición de anuncios, públicos personalizados, catálogo, reportes (gasto, CTR, ROAS; cortes por edad, género, plataforma), diagnóstico de señales, pruebas A/B | Blog de desarrolladores de Meta (16/07/2026) y documentación del Ads MCP Server, citados en resultados de búsqueda |
+| Permisos por herramienta: permitida, bloqueada o con aprobación | Jon Loomer (actualización sobre controles de seguridad) |
+| Conexión: conectores → URL del servidor de Meta → login con Facebook → elegir cartera comercial | Jon Loomer y guías de terceros. Varía por app/plan |
+| "Las campañas se crean en pausa" | Reportado por la comunidad, no confirmado en el texto de Meta → en el carrusel se recomienda **pedirle** que las deje en pausa |
+| Cifras de las slides 5 y 6 | Ejemplo ilustrativo (marcado en la slide) |

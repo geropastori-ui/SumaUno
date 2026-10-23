@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8" />
-<title>Carrusel · Pautar con IA</title>
+<title>Carrusel · Esto cambia las reglas del juego (pautar con IA)</title>
 <style>
   @font-face { font-family: "RHD"; font-weight: 500; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-display-latin-500-normal.woff2"); }
   @font-face { font-family: "RHD"; font-weight: 700; src: url("../../motion/reel-05-por-que-existe-senda/assets/fonts/red-hat-display-latin-700-normal.woff2"); }
@@ -70,116 +70,178 @@
   .logo { height:58px; margin-top:auto; align-self:flex-start; }
   .foot { font:500 30px/1.4 "RHT"; color:var(--muted); margin-top:28px; }
 
-  .photo { position:absolute; inset:0; background-size:cover; background-position:center; }
-  .shade { position:absolute; inset:0; background:linear-gradient(180deg, rgba(22,35,43,.92) 0%, rgba(22,35,43,.55) 38%, rgba(22,35,43,.25) 60%, rgba(22,35,43,.9) 100%); }
-  .over { position:relative; z-index:1; display:flex; flex-direction:column; height:100%; }
-  .tophalf { position:absolute; left:0; right:0; top:0; height:560px; background-size:cover; background-position:center 40%; }
-  .tophalf::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(22,35,43,0) 40%, #16232B 100%); }
-  .pills { display:flex; align-items:center; gap:0; margin-top:70px; }
-  .pills .p { flex:1; height:170px; border-radius:44px; display:flex; align-items:center; justify-content:center; font:900 60px "RHD"; letter-spacing:-.02em; }
-  .pills .p.a { background:var(--niebla); color:var(--pizarra); }
-  .pills .p.b { background:var(--verde); }
-  .pills .k { flex:0 0 120px; position:relative; height:8px; background:var(--naranja); }
-  .pills .k::after { content:""; position:absolute; left:34px; top:-22px; width:52px; height:52px; border-radius:50%; background:var(--naranja); }
-  .note { font:500 28px "RHT"; color:var(--muted); margin-top:28px; }
-  .campaign { margin-top:34px; background:var(--niebla); color:var(--pizarra); border-radius:32px; padding:34px 40px; }
-  .campaign .t { font:900 44px "RHD"; margin-bottom:12px; }
-  .crow { display:flex; justify-content:space-between; font:500 34px "RHT"; padding:16px 0; border-top:2px solid rgba(22,35,43,.12); }
+  .ico { width:72px; height:72px; }
+  .ico * { fill:none; stroke:currentColor; stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round; }
+  /* portada */
+  .hero-ill { position:relative; height:520px; margin-top:auto; margin-bottom:40px; }
+  .hero-ill .bub { position:absolute; left:0; top:60px; width:400px; height:270px; border-radius:46px 46px 46px 12px; background:var(--naranja); color:var(--pizarra); padding:40px; }
+  .hero-ill .bub i { display:block; height:22px; border-radius:11px; background:rgba(22,35,43,.55); margin-bottom:22px; }
+  .hero-ill .panel { position:absolute; right:0; top:0; width:420px; height:420px; border-radius:40px; background:var(--niebla); color:var(--pizarra); padding:36px; }
+  .hero-ill .panel .bar { position:absolute; bottom:40px; width:64px; border-radius:12px 12px 4px 4px; background:var(--verde); }
+  .hero-ill .panel .lbl { font:900 38px "RHD"; }
+  .hero-ill .cable { position:absolute; left:380px; top:190px; width:100px; height:8px; background:var(--niebla); }
+  .hero-ill .plug { z-index:2; position:absolute; left:404px; top:166px; width:56px; height:56px; border-radius:50%; background:var(--pizarra); border:8px solid var(--naranja); }
+  /* diagrama de flujo */
+  .flow { display:flex; flex-direction:column; align-items:stretch; gap:0; margin-top:48px; }
+  .node { display:flex; align-items:center; gap:28px; border-radius:28px; padding:26px 32px; background:rgba(228,238,240,.07); border:2px solid var(--line); }
+  .node.hl { background:var(--niebla); color:var(--pizarra); border-color:transparent; }
+  .node.or { background:var(--naranja); color:var(--pizarra); border-color:transparent; }
+  .node .nt { font:900 42px "RHD"; letter-spacing:-.01em; }
+  .node .ns { font:500 28px "RHT"; opacity:.75; margin-top:4px; }
+  .arrow { height:56px; display:flex; justify-content:center; }
+  .arrow svg { width:40px; height:56px; }
+  .meta-note { margin-top:auto; font:500 28px/1.4 "RHT"; color:var(--muted); }
+  /* grilla de capacidades */
+  .grid6 { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:44px; }
+  .cap { border-radius:28px; padding:30px 30px; background:rgba(228,238,240,.07); display:flex; flex-direction:column; gap:16px; min-height:250px; }
+  .cap .ico { color:var(--naranja); width:64px; height:64px; }
+  .cap .ct { font:900 38px/1.05 "RHD"; letter-spacing:-.01em; }
+  .cap .cd { font:500 26px/1.35 "RHT"; color:var(--muted); }
+  /* antes / ahora */
+  .lane { margin-top:40px; }
+  .lane .lt { font:700 26px "RHT"; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; }
+  .steps7 { display:flex; flex-wrap:wrap; gap:12px; }
+  .steps7 span { font:700 27px "RHT"; padding:14px 20px; border-radius:16px; background:rgba(228,238,240,.08); border:2px solid var(--line); }
+  .steps3 { display:flex; align-items:center; gap:14px; }
+  .steps3 .s { flex:1; text-align:center; font:700 30px/1.2 "RHT"; padding:28px 16px; border-radius:22px; }
+  .steps3 .s.a { background:var(--naranja); color:var(--pizarra); }
+  .steps3 .s.b { background:var(--verde); }
+  .steps3 .s.c { background:var(--niebla); color:var(--pizarra); }
+  .steps3 .chev { font:900 40px "RHD"; color:var(--muted); }
+  /* ejemplos */
+  .demo-tag { display:inline-block; margin-left:18px; vertical-align:middle; font:700 22px "RHT"; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); border:2px solid var(--line); border-radius:999px; padding:8px 18px; }
+  .campaign { margin-top:30px; background:var(--niebla); color:var(--pizarra); border-radius:32px; padding:32px 40px; }
+  .campaign .t { font:900 42px "RHD"; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; }
+  .campaign .t em { font:700 24px "RHT"; font-style:normal; background:rgba(22,35,43,.12); padding:8px 16px; border-radius:999px; }
+  .crow { display:flex; justify-content:space-between; font:500 32px "RHT"; padding:15px 0; border-top:2px solid rgba(22,35,43,.12); }
   .crow b { font-weight:700; color:var(--pizarra); }
-  .barsv { display:flex; align-items:flex-end; gap:36px; height:380px; margin-top:44px; padding:0 10px; }
-  .barsv div { flex:1; border-radius:16px 16px 4px 4px; background:rgba(228,238,240,.28); position:relative; }
-  .barsv div.hi { background:var(--niebla); }
-  .barsv div span { position:absolute; bottom:-50px; left:0; right:0; text-align:center; font:700 28px "RHT"; color:var(--muted); }
-  .compare { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:auto; }
-  .compare .c { border-radius:26px; padding:30px 30px; }
-  .compare .c.antes { background:rgba(228,238,240,.07); border:2px solid var(--line); }
-  .compare .c.ahora { background:var(--niebla); color:var(--pizarra); }
-  .compare .tag { font:700 24px "RHT"; letter-spacing:.1em; text-transform:uppercase; opacity:.7; }
-  .compare .tx { font:700 34px/1.3 "RHT"; margin-top:12px; }
-  .toggle { display:flex; align-items:center; gap:30px; margin-top:40px; }
-  .sw { width:200px; height:96px; border-radius:48px; background:rgba(228,238,240,.2); position:relative; }
-  .sw i { position:absolute; left:10px; top:10px; width:76px; height:76px; border-radius:50%; background:var(--niebla); }
-  .toggle span { font:700 36px "RHT"; color:var(--muted); }
+  .kpis { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:30px; }
+  .kpi { background:rgba(228,238,240,.07); border-radius:24px; padding:26px 22px; }
+  .kpi .kl { font:700 22px "RHT"; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
+  .kpi .kv { font:900 50px "RHD"; margin-top:8px; letter-spacing:-.02em; }
+  .kpi .kd { font:700 24px "RHT"; margin-top:4px; }
+  .up { color:#8fd6a8; } .down { color:#8fd6a8; }
+  .spark { margin-top:22px; background:rgba(228,238,240,.07); border-radius:24px; padding:22px 26px; }
+  /* pasos de conexión */
+  .connect { margin-top:40px; display:flex; flex-direction:column; gap:18px; }
+  .cstep { display:flex; gap:26px; align-items:center; background:rgba(228,238,240,.07); border-radius:24px; padding:24px 28px; }
+  .cstep .cn { flex:0 0 70px; height:70px; border-radius:50%; background:var(--naranja); color:var(--pizarra); display:flex; align-items:center; justify-content:center; font:900 36px "RHD"; }
+  .cstep .ctx { font:500 31px/1.3 "RHT"; }
+  .cstep .ctx b { display:block; font:700 34px "RHT"; margin-bottom:2px; }
+  .req { margin-top:auto; font:500 26px/1.45 "RHT"; color:var(--muted); border-top:2px solid var(--line); padding-top:22px; }
+  /* semáforo */
+  .lights { margin-top:40px; display:flex; flex-direction:column; gap:20px; }
+  .light { display:flex; gap:28px; align-items:center; border-radius:28px; padding:28px 32px; background:rgba(228,238,240,.06); }
+  .light .dot { flex:0 0 76px; height:76px; border-radius:50%; }
+  .light .lt2 { font:900 40px "RHD"; letter-spacing:-.01em; }
+  .light .ld { font:500 28px/1.35 "RHT"; color:var(--muted); margin-top:6px; }
 </style>
 </head>
 <body>
 <div id="slides">
 
-<div class="slide cover" style="padding:0">
-  <div class="photo" style="background-image:url(img/portada.png)"></div><div class="shade"></div>
-  <div class="over" style="padding:110px 96px 130px">
-    <div class="chip"><i></i>IA + Publicidad</div>
-    <h1 style="margin-top:40px">Esto cambia las <span class="o">reglas del juego</span></h1>
-    <p class="lead" style="margin-top:22px;color:var(--niebla)">de la publicidad para pymes.</p>
-    <div class="swipe">Deslizá →</div>
+<div class="slide cover">
+  <div class="chip"><i></i>IA + Publicidad</div>
+  <h1 style="margin-top:44px">Esto cambia las <span class="o">reglas del juego</span></h1>
+  <p class="lead" style="margin-top:24px">Meta conectó sus anuncios con ChatGPT y Claude. Te explicamos qué significa para tu pyme.</p>
+  <div class="hero-ill">
+    <div class="bub"><i style="width:80%"></i><i style="width:95%"></i><i style="width:60%"></i></div>
+    <div class="cable"></div><div class="plug"></div>
+    <div class="panel"><div class="lbl">Anuncios</div>
+      <div class="bar" style="left:40px;height:90px"></div><div class="bar" style="left:124px;height:150px"></div><div class="bar" style="left:208px;height:120px"></div><div class="bar" style="left:292px;height:210px;background:var(--naranja)"></div></div>
+  </div>
+  <div class="swipe">Deslizá →</div>
+</div>
+
+<div class="slide">
+  <div class="eyebrow"><span class="n">01</span> · Qué es</div>
+  <h2>Un "enchufe" oficial entre la IA y tus anuncios</h2>
+  <div class="flow">
+    <div class="node"><span style="color:var(--naranja)"><svg class="ico" viewBox="0 0 48 48"><circle cx="24" cy="16" r="8"/><path d="M8 42c2-9 8-14 16-14s14 5 16 14"/></svg></span><div><div class="nt">Vos</div><div class="ns">Escribís lo que necesitás</div></div></div>
+    <div class="arrow"><svg viewBox="0 0 40 56"><path d="M20 4v42M8 36l12 14 12-14" fill="none" stroke="#FF5B04" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="node or"><svg class="ico" viewBox="0 0 48 48"><path d="M8 8h32a4 4 0 014 4v18a4 4 0 01-4 4H20l-10 8v-8H8a4 4 0 01-4-4V12a4 4 0 014-4z"/><path d="M14 19h20M14 25h12"/></svg><div><div class="nt">ChatGPT o Claude</div><div class="ns">Entiende el pedido y arma los pasos</div></div></div>
+    <div class="arrow"><svg viewBox="0 0 40 56"><path d="M20 4v42M8 36l12 14 12-14" fill="none" stroke="#FF5B04" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="node"><svg class="ico" style="color:var(--naranja)" viewBox="0 0 48 48"><path d="M18 4v10M30 4v10"/><path d="M12 14h24v8a12 12 0 01-24 0z"/><path d="M24 34v10"/></svg><div><div class="nt">Conector de Meta Ads</div><div class="ns">El acceso oficial, con permisos</div></div></div>
+    <div class="arrow"><svg viewBox="0 0 40 56"><path d="M20 4v42M8 36l12 14 12-14" fill="none" stroke="#FF5B04" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="node hl"><svg class="ico" viewBox="0 0 48 48"><path d="M6 20v8a3 3 0 003 3h5l12 9V8L14 17H9a3 3 0 00-3 3z"/><path d="M34 16a10 10 0 010 16M38 10a18 18 0 010 28"/></svg><div><div class="nt">Tu cuenta publicitaria</div><div class="ns">Facebook e Instagram</div></div></div>
+  </div>
+  <p class="meta-note">Lo lanzó Meta en beta abierta el 29 de abril de 2026, para anunciantes habilitados de todo el mundo.</p>
+</div>
+
+<div class="slide">
+  <div class="eyebrow"><span class="n">02</span> · Qué puede hacer</div>
+  <h2>6 cosas que la IA ya hace en tu cuenta</h2>
+  <div class="grid6">
+    <div class="cap"><svg class="ico" viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="28" rx="5"/><path d="M14 18h20M14 25h12"/><path d="M30 40l10-10 4 4-10 10h-4z"/></svg><div class="ct">Crear y editar</div><div class="cd">Campañas, conjuntos y anuncios.</div></div>
+    <div class="cap"><svg class="ico" viewBox="0 0 48 48"><path d="M6 40h36"/><rect x="10" y="24" width="6" height="12" rx="1.5"/><rect x="21" y="16" width="6" height="20" rx="1.5"/><rect x="32" y="8" width="6" height="28" rx="1.5"/></svg><div class="ct">Analizar resultados</div><div class="cd">Gasto, clics, retorno; por edad, género o plataforma.</div></div>
+    <div class="cap"><svg class="ico" viewBox="0 0 48 48"><circle cx="17" cy="16" r="6"/><circle cx="33" cy="18" r="5"/><path d="M5 40c1-8 6-12 12-12s11 4 12 12"/><path d="M29 30c6 0 11 3 13 10"/></svg><div class="ct">Armar públicos</div><div class="cd">Audiencias personalizadas.</div></div>
+    <div class="cap"><svg class="ico" viewBox="0 0 48 48"><path d="M24 4l18 9v22l-18 9-18-9V13z"/><path d="M6 13l18 9 18-9M24 22v22"/></svg><div class="ct">Manejar el catálogo</div><div class="cd">Cargar productos y detectar errores.</div></div>
+    <div class="cap"><svg class="ico" viewBox="0 0 48 48"><path d="M4 26h9l5-12 8 22 5-14 4 4h9"/></svg><div class="ct">Revisar el píxel</div><div class="cd">Diagnóstico de la calidad de tus señales.</div></div>
+    <div class="cap"><svg class="ico" viewBox="0 0 48 48"><rect x="4" y="10" width="18" height="28" rx="4"/><rect x="26" y="10" width="18" height="28" rx="4"/><path d="M9 30l4-12 4 12M10.5 26h5M31 18h5a3 3 0 010 6h-5zM31 24h6a3 3 0 010 6h-6z"/></svg><div class="ct">Pruebas A/B</div><div class="cd">Comparar versiones y quedarte con la mejor.</div></div>
   </div>
 </div>
 
 <div class="slide">
-  <div class="eyebrow"><span class="n">01</span> · La noticia</div>
-  <h2>Meta conectó sus anuncios con ChatGPT</h2>
-  <div class="pills"><div class="p a">Meta Ads</div><div class="k"></div><div class="p b">ChatGPT</div></div>
-  <p class="body" style="margin-top:70px">Ahora una campaña de Instagram o Facebook se puede <b>crear, ajustar y analizar conversando</b> con la IA. También funciona con Claude.</p>
-  <p class="note">Beta abierta desde abril de 2026.</p>
+  <div class="eyebrow"><span class="n">03</span> · Qué cambia</div>
+  <h2>De configurar a <span class="o">conversar</span></h2>
+  <div class="lane"><div class="lt">Antes · en el Administrador de anuncios</div>
+    <div class="steps7"><span>1 Objetivo</span><span>2 Público</span><span>3 Ubicaciones</span><span>4 Presupuesto</span><span>5 Calendario</span><span>6 Creatividades</span><span>7 Textos</span><span>8 Revisión</span><span>9 Publicar</span></div></div>
+  <div class="lane" style="margin-top:60px"><div class="lt">Ahora · conversando</div>
+    <div class="steps3"><div class="s a">Escribís lo que querés</div><div class="chev">›</div><div class="s b">La IA arma el borrador</div><div class="chev">›</div><div class="s c">Revisás y activás</div></div></div>
+  <div class="rule"><small>La clave</small>Ya no gana el que sabe configurar. Gana el que sabe <span class="o">pedir.</span></div>
 </div>
 
 <div class="slide">
-  <div class="eyebrow"><span class="n">02</span> · Cómo funciona</div>
+  <div class="eyebrow"><span class="n">04</span> · Crear <span class="demo-tag">Ejemplo ilustrativo</span></div>
   <h2>Le pedís la campaña. <span class="o">La arma.</span></h2>
-  <div class="bubble"><small>Vos</small>"Campaña para mis viandas, $10.000 por día, para gente de Santa Fe."</div>
-  <div class="campaign"><div class="t">Campaña lista · en pausa</div>
+  <div class="bubble" style="margin-top:34px"><small>Vos</small>"Armame una campaña para vender viandas en Santa Fe, $10.000 por día, dos semanas. Dejala en pausa."</div>
+  <div class="campaign"><div class="t">Borrador listo <em>⏸ En pausa</em></div>
     <div class="crow"><span>Objetivo</span><b>Ventas</b></div>
-    <div class="crow"><span>Presupuesto</span><b>$10.000 / día</b></div>
-    <div class="crow"><span>Público</span><b>Santa Fe</b></div>
-    <div class="crow"><span>Anuncios</span><b>3 versiones</b></div>
+    <div class="crow"><span>Público</span><b>Santa Fe · 25 a 55 años</b></div>
+    <div class="crow"><span>Presupuesto</span><b>$10.000 / día · 14 días</b></div>
+    <div class="crow"><span>Anuncios</span><b>3 versiones para probar</b></div>
   </div>
 </div>
 
 <div class="slide">
-  <div class="eyebrow"><span class="n">03</span> · Los resultados</div>
-  <h2>Y te explica qué funciona, <span class="o">en criollo</span></h2>
-  <div class="bubble"><small>Vos</small>"¿Qué anuncio me está funcionando mejor?"</div>
-  <div class="barsv"><div style="height:42%"><span>Anuncio 1</span></div><div class="hi" style="height:96%"><span>Anuncio 2</span></div><div style="height:58%"><span>Anuncio 3</span></div></div>
-  <div class="reply" style="margin-top:80px"><small>IA</small>El 2: te trae más consultas por menos plata. ¿Le paso más presupuesto?</div>
-</div>
-
-<div class="slide" style="padding-top:0">
-  <div class="tophalf" style="background-image:url(img/manos-celular.png)"></div>
-  <div style="height:520px"></div>
-  <div class="eyebrow" style="position:relative"><span class="n">04</span> · Qué cambia</div>
-  <h2 style="position:relative">De configurar a <span class="o">conversar</span></h2>
-  <div class="compare" style="margin-top:44px">
-    <div class="c antes"><div class="tag">Antes</div><div class="tx">Menús, segmentaciones y decenas de opciones en el Administrador de anuncios.</div></div>
-    <div class="c ahora"><div class="tag">Ahora</div><div class="tx">Un mensaje bien escrito: qué querés, para quién y cuánto.</div></div>
+  <div class="eyebrow"><span class="n">05</span> · Analizar <span class="demo-tag">Ejemplo ilustrativo</span></div>
+  <h2>Te explica los números <span class="o">en criollo</span></h2>
+  <div class="bubble" style="margin-top:34px"><small>Vos</small>"¿Cómo me fue esta semana?"</div>
+  <div class="kpis">
+    <div class="kpi"><div class="kl">Gasto</div><div class="kv">$68 mil</div><div class="kd" style="color:var(--muted)">en presupuesto</div></div>
+    <div class="kpi"><div class="kl">Consultas</div><div class="kv">41</div><div class="kd up">▲ 18 %</div></div>
+    <div class="kpi"><div class="kl">Costo c/u</div><div class="kv">$1.660</div><div class="kd down">▼ 12 %</div></div>
   </div>
+  <div class="reply" style="margin-top:30px"><small>IA</small>El anuncio 2 trae la mitad de las consultas. Te sugiero pasarle más presupuesto. ¿Lo preparo?</div>
 </div>
 
 <div class="slide">
-  <div class="eyebrow"><span class="n">05</span> · La clave</div>
-  <h2>Ya no gana el que sabe configurar. Gana el que sabe <span class="o">pedir.</span></h2>
-  <div class="nlist">
-    <div class="row"><div class="num">1</div><div class="tx"><b>Qué querés lograr</b>Ventas, consultas por WhatsApp, visitas al local.</div></div>
-    <div class="row"><div class="num">2</div><div class="tx"><b>A quién y dónde</b>Tu cliente ideal y tu zona.</div></div>
-    <div class="row"><div class="num">3</div><div class="tx"><b>Cuánto y hasta cuándo</b>Presupuesto diario y fecha de corte.</div></div>
+  <div class="eyebrow"><span class="n">06</span> · Cómo conectarlo</div>
+  <h2>4 pasos, sin programar</h2>
+  <div class="connect">
+    <div class="cstep"><div class="cn">1</div><div class="ctx"><b>Abrí ChatGPT o Claude</b>Andá a la sección de conectores.</div></div>
+    <div class="cstep"><div class="cn">2</div><div class="ctx"><b>Agregá el conector de Meta Ads</b>Es el oficial de Meta.</div></div>
+    <div class="cstep"><div class="cn">3</div><div class="ctx"><b>Iniciá sesión con Facebook</b>Elegí tu cuenta comercial.</div></div>
+    <div class="cstep"><div class="cn">4</div><div class="ctx"><b>Definí los permisos</b>Qué puede hacer sola y qué con tu aprobación.</div></div>
   </div>
+  <p class="req">Necesitás ser administrador de la cuenta publicitaria. Está en beta: puede que todavía no aparezca en todas las cuentas, y algunos planes de las IAs lo limitan.</p>
 </div>
 
 <div class="slide">
-  <div class="eyebrow"><span class="n">06</span> · Ojo con esto</div>
-  <h2>Lo que le pedís, se ejecuta de verdad</h2>
-  <div class="toggle"><div class="sw"><i></i></div><span>Pausado</span></div>
-  <div class="warn">
-    <div class="it"><span class="x">!</span><span>Pedile que arme todo <b>en pausa</b>.</span></div>
-    <div class="it"><span class="x">!</span><span><b>Revisá</b> textos, público y presupuesto antes de activar.</span></div>
-    <div class="it"><span class="x">!</span><span>Poné un <b>tope de gasto</b> desde el primer día.</span></div>
+  <div class="eyebrow"><span class="n">07</span> · Los permisos</div>
+  <h2>Usalo como un semáforo</h2>
+  <div class="lights">
+    <div class="light"><div class="dot" style="background:#3fb27f"></div><div><div class="lt2">Que lo haga sola</div><div class="ld">Reportes, análisis, revisar el píxel.</div></div></div>
+    <div class="light"><div class="dot" style="background:#f2b233"></div><div><div class="lt2">Con tu aprobación</div><div class="ld">Crear campañas y anuncios (siempre en pausa), armar públicos.</div></div></div>
+    <div class="light"><div class="dot" style="background:var(--naranja)"></div><div><div class="lt2">Siempre vos</div><div class="ld">Activar campañas y subir presupuestos: lo que pedís, se ejecuta de verdad.</div></div></div>
   </div>
   <div class="rule"><small>La regla</small>La IA arma. <span class="o">Vos activás.</span></div>
 </div>
 
 <div class="slide">
   <div class="eyebrow">¿Querés probarlo?</div>
-  <h2>Te pasamos el paso a paso para conectarlo</h2>
-  <p class="lead">Cómo vincular tu cuenta publicitaria de Meta con ChatGPT o Claude, sin ser experto.</p>
+  <h2>Te ayudamos a conectarlo y a armar tu primera campaña</h2>
+  <p class="lead">Lo vemos juntos en un diagnóstico gratuito.</p>
   <div class="cta-btn">Comentá PAUTA</div>
   <p class="foot">Guardalo para tu próxima campaña 🔖<br>Seguinos: la publicidad está cambiando todas las semanas.</p>
   <img class="logo" src="../../marca/svg/senda-principal-negativo.svg" alt="Senda Consultora">
