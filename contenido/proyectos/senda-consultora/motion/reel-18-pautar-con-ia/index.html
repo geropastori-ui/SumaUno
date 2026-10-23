@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Senda · Reel 18 · Pautar con IA</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Red Hat Display"; font-weight: 500; src: url("assets/fonts/red-hat-display-latin-500-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Red Hat Display"; font-weight: 700; src: url("assets/fonts/red-hat-display-latin-700-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Red Hat Display"; font-weight: 900; src: url("assets/fonts/red-hat-display-latin-900-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Red Hat Text"; font-weight: 400; src: url("assets/fonts/red-hat-text-latin-400-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Red Hat Text"; font-weight: 500; src: url("assets/fonts/red-hat-text-latin-500-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Red Hat Text"; font-weight: 700; src: url("assets/fonts/red-hat-text-latin-700-normal.woff2") format("woff2"); }
+      :root { --pizarra:#16232b; --niebla:#e4eef0; --verde:#075056; --naranja:#ff5b04; --muted:rgba(228,238,240,.7); --line:rgba(228,238,240,.16); }
+      * { margin:0; padding:0; box-sizing:border-box; }
+      html, body { width:1080px; height:1920px; overflow:hidden; background:var(--pizarra); }
+      #root { position:relative; width:1080px; height:1920px; overflow:hidden; background:var(--pizarra); color:var(--niebla); font-family:"Red Hat Text",sans-serif; }
+      .clip { position:absolute; inset:0; }
+      #mark.clip { inset:auto; right:80px; top:130px; width:56px; height:69px; }
+      .h { font-family:"Red Hat Display",sans-serif; font-weight:900; letter-spacing:-.03em; line-height:.98; }
+      .xl { font-size:128px; } .lg { font-size:100px; } .md { font-size:64px; }
+      .eyebrow { font:500 44px "Red Hat Text"; color:var(--muted); }
+      .o { color:var(--naranja); }
+      .wd { display:inline-block; will-change:transform, filter; }
+      .block { position:absolute; left:96px; right:96px; }
+      .center { text-align:center; }
+      /* 1 · tablero */
+      #board { position:absolute; left:240px; top:930px; width:600px; height:600px; display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+      #board div { border-radius:14px; background:var(--verde); }
+      #board div:nth-child(odd) { background:rgba(228,238,240,.9); }
+      /* 2 · conexión */
+      .pill { position:absolute; width:380px; height:150px; border-radius:40px; display:flex; align-items:center; justify-content:center; font:900 56px "Red Hat Display"; letter-spacing:-.02em; }
+      #p-meta { left:96px; top:1000px; background:var(--niebla); color:var(--pizarra); }
+      #p-gpt { right:96px; top:1000px; background:var(--verde); color:var(--niebla); }
+      #link { position:absolute; left:476px; top:1072px; width:128px; height:6px; border-radius:3px; background:var(--naranja); transform-origin:0 50%; }
+      #knot { position:absolute; left:510px; top:1045px; width:60px; height:60px; border-radius:50%; background:var(--naranja); }
+      /* 3 · chat + campaña */
+      .bubble { position:absolute; border-radius:40px; padding:34px 40px; font:700 44px/1.25 "Red Hat Text"; }
+      .user { right:96px; max-width:800px; background:var(--naranja); color:var(--pizarra); border-bottom-right-radius:10px; }
+      .bot { left:96px; max-width:800px; background:var(--verde); color:var(--niebla); border-bottom-left-radius:10px; }
+      .bubble small { display:block; font:700 28px "Red Hat Text"; letter-spacing:.08em; text-transform:uppercase; opacity:.7; margin-bottom:8px; }
+      #card { position:absolute; left:96px; right:96px; top:980px; background:var(--niebla); color:var(--pizarra); border-radius:36px; padding:40px 44px; }
+      #card .t { font:900 46px "Red Hat Display"; margin-bottom:22px; }
+      .crow { display:flex; justify-content:space-between; font:500 38px "Red Hat Text"; padding:18px 0; border-top:2px solid rgba(22,35,43,.12); }
+      .crow b { font-weight:700; }
+      .bars { position:absolute; left:96px; right:96px; top:940px; height:420px; display:flex; align-items:flex-end; gap:40px; }
+      .bars div { flex:1; border-radius:18px 18px 4px 4px; background:rgba(228,238,240,.3); transform-origin:50% 100%; position:relative; }
+      .bars div span { position:absolute; bottom:-62px; left:0; right:0; text-align:center; font:700 34px "Red Hat Text"; color:var(--muted); }
+      .bars div.hi { background:var(--niebla); }
+      /* 4 · administrador */
+      #mgr { position:absolute; left:96px; right:96px; top:860px; height:560px; border-radius:30px; background:rgba(228,238,240,.08); border:3px solid var(--line); overflow:hidden; }
+      #mgr .side { position:absolute; left:0; top:0; bottom:0; width:200px; background:rgba(228,238,240,.06); }
+      #mgr .ln { position:absolute; left:240px; height:26px; border-radius:13px; background:rgba(228,238,240,.16); }
+      #mgr .sd { position:absolute; left:34px; width:130px; height:22px; border-radius:11px; background:rgba(228,238,240,.14); }
+      #mini { position:absolute; left:340px; top:1060px; width:400px; padding:30px 34px; border-radius:36px 36px 36px 10px; background:var(--naranja); color:var(--pizarra); font:900 48px "Red Hat Display"; text-align:center; }
+      /* 5 · interruptor */
+      #sw { position:absolute; left:290px; top:1000px; width:500px; height:220px; border-radius:110px; background:rgba(228,238,240,.18); }
+      #knob { position:absolute; left:20px; top:20px; width:180px; height:180px; border-radius:50%; background:var(--niebla); }
+      #swl { position:absolute; left:0; right:0; top:1270px; text-align:center; font:700 48px "Red Hat Text"; color:var(--muted); }
+      #swl2 { position:absolute; left:0; right:0; top:1270px; text-align:center; font:700 48px "Red Hat Text"; color:var(--niebla); opacity:0; }
+      /* 6 · CTA */
+      #logo { position:absolute; left:220px; top:330px; width:640px; height:553px; }
+      #cta-btn { position:absolute; left:50%; top:1180px; transform:translateX(-50%); padding:36px 70px; border-radius:999px; background:var(--naranja); color:var(--pizarra); font:900 60px "Red Hat Display"; white-space:nowrap; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="26.2" data-width="1080" data-height="1920">
+      <div id="bg" class="clip" data-start="0" data-duration="26.2" data-track-index="0"></div>
+      <svg id="mark" class="clip" data-start="0" data-duration="22" data-track-index="1" viewBox="0 0 680 840"><path fill="#FF5B04" d="M320 0 L680 0 L680 210 L320 210 Z M320 0 A210 210 0 0 0 320 420 Z M360 840 L0 840 L0 630 L360 630 Z M360 840 A210 210 0 0 0 360 420 Z" /></svg>
+
+      <!-- 1 · Gancho: "Esto cambia las reglas del juego de la publicidad." -->
+      <div id="s1" class="clip" data-start="0" data-duration="3.2" data-track-index="2">
+        <div class="block h xl" style="top:340px">Esto cambia las <span class="o">reglas del juego</span></div>
+        <div class="block eyebrow" style="top:760px">de la publicidad.</div>
+        <div id="board"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+
+      <!-- 2 · "Meta conectó sus anuncios con ChatGPT. Ahora las campañas de Instagram se arman conversando." -->
+      <div id="s2" class="clip" data-start="3.2" data-duration="5.0" data-track-index="2">
+        <div class="block eyebrow" style="top:420px">Meta conectó sus anuncios con</div>
+        <div class="block h lg" style="top:490px">ChatGPT.</div>
+        <div id="link"></div>
+        <div class="pill" id="p-meta">Meta Ads</div>
+        <div class="pill" id="p-gpt">ChatGPT</div>
+        <div id="knot"></div>
+        <div class="block h md" style="top:1340px">Ahora las campañas se arman <span class="o">conversando.</span></div>
+      </div>
+
+      <!-- 3a · "Le pedís: 'campaña para mis viandas…' y la arma." -->
+      <div id="s3a" class="clip" data-start="8.2" data-duration="3.3" data-track-index="2">
+        <div class="block h md" style="top:300px">Le pedís la campaña. <span class="o">La arma.</span></div>
+        <div class="bubble user" style="top:520px"><small>Vos</small>Campaña para mis viandas, $10.000 por día, en Santa Fe.</div>
+        <div id="card"><div class="t">Campaña lista ✓</div>
+          <div class="crow"><span>Objetivo</span><b>Ventas</b></div>
+          <div class="crow"><span>Presupuesto</span><b>$10.000 / día</b></div>
+          <div class="crow"><span>Público</span><b>Santa Fe</b></div>
+          <div class="crow"><span>Anuncios</span><b>3 versiones</b></div>
+        </div>
+      </div>
+
+      <!-- 3b · "Le preguntás qué anuncio funciona… y te lo dice." -->
+      <div id="s3b" class="clip" data-start="11.5" data-duration="2.7" data-track-index="2">
+        <div class="bubble user" style="top:300px"><small>Vos</small>¿Qué anuncio funciona mejor?</div>
+        <div class="bars"><div style="height:45%"><span>Anuncio 1</span></div><div class="hi" style="height:95%"><span>Anuncio 2</span></div><div style="height:60%"><span>Anuncio 3</span></div></div>
+        <div class="bubble bot" style="top:1450px"><small>IA</small>El 2: más consultas por menos plata.</div>
+      </div>
+
+      <!-- 4 · "Pautar ya no es saber usar el Administrador de anuncios: es saber qué pedirle." -->
+      <div id="s4" class="clip" data-start="14.2" data-duration="4.0" data-track-index="2">
+        <div class="block h md" style="top:300px">Ya no gana el que sabe configurar.</div>
+        <div id="mgr"><div class="side"></div><div class="sd" style="top:40px"></div><div class="sd" style="top:100px"></div><div class="sd" style="top:160px"></div><div class="sd" style="top:220px"></div><div class="sd" style="top:280px"></div><div class="sd" style="top:340px"></div><div class="sd" style="top:400px"></div><div class="ln" style="top:50px;width:520px"></div><div class="ln" style="top:112px;width:380px"></div><div class="ln" style="top:174px;width:460px"></div><div class="ln" style="top:236px;width:300px"></div><div class="ln" style="top:298px;width:500px"></div><div class="ln" style="top:360px;width:420px"></div><div class="ln" style="top:422px;width:340px"></div><div class="ln" style="top:484px;width:480px"></div></div>
+        <div id="mini">"Armame…"</div>
+        <div class="block h lg" style="top:1500px">Gana el que sabe <span class="o">pedir.</span></div>
+      </div>
+
+      <!-- 5 · "Eso sí: que lo arme todo en pausa… y lo activás vos." -->
+      <div id="s5" class="clip" data-start="18.2" data-duration="3.8" data-track-index="2">
+        <div class="block h lg center" style="top:440px">En <span class="o">pausa.</span></div>
+        <div class="block h md center" style="top:600px">Lo activás vos.</div>
+        <div id="sw"><div id="knob"></div></div>
+        <div id="swl">Pausado</div>
+        <div id="swl2">Activo ✓</div>
+      </div>
+
+      <!-- 6 · "Comentá PAUTA y te paso el paso a paso." -->
+      <div id="s6" class="clip" data-start="22" data-duration="4.2" data-track-index="2">
+        <svg id="logo" viewBox="0 0 2856 2468.7" role="img" aria-label="Senda Consultora"><defs><clipPath id="sClip"><path d="M1401.8 0 L1873.44 0 L1873.44 275.12 L1401.8 275.12 Z M1401.8 0 A275.12 275.12 0 0 0 1401.8 550.25 Z M1454.2 1100.5 L982.56 1100.5 L982.56 825.38 L1454.2 825.38 Z M1454.2 1100.5 A275.12 275.12 0 0 0 1454.2 550.25 Z" /></clipPath></defs>
+          <path id="sDraw" clip-path="url(#sClip)" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" fill="none" stroke="#FF5B04" stroke-width="300" d="M1920 137.56 H1401.8 A137.56 137.56 0 0 0 1401.8 412.68 L1454.2 687.81 A137.56 137.56 0 0 1 1454.2 962.94 H930" />
+          <g id="wordmark" fill="#E4EEF0"><path transform="translate(-3 2165.5)" d="M313 10Q228 10 147 -21.5Q66 -53 3 -111L86 -215Q148 -162 204 -137.5Q260 -113 323 -113Q367 -113 399 -123.5Q431 -134 448.5 -154Q466 -174 466 -201Q466 -237 440 -256.5Q414 -276 351 -287L212 -310Q123 -326 76.5 -374Q30 -422 30 -498Q30 -563 63.5 -611Q97 -659 158.5 -684.5Q220 -710 305 -710Q382 -710 459 -684Q536 -658 594 -612L516 -504Q406 -588 296 -588Q256 -588 227 -578Q198 -568 182.5 -550.5Q167 -533 167 -509Q167 -477 190.5 -459.5Q214 -442 267 -433L399 -411Q504 -394 556.5 -344.5Q609 -295 609 -214Q609 -146 572.5 -95.5Q536 -45 469.5 -17.5Q403 10 313 10Z"/><path transform="translate(614 2165.5)" d="M309 10Q231 10 167.5 -26Q104 -62 67 -123Q30 -184 30 -260Q30 -336 65.5 -397Q101 -458 162 -494Q223 -530 298 -530Q373 -530 431 -493.5Q489 -457 522.5 -393.5Q556 -330 556 -250V-214H170Q179 -183 199.5 -158Q220 -133 250.5 -119.5Q281 -106 316 -106Q351 -106 380.5 -116.5Q410 -127 431 -147L521 -65Q473 -26 422.5 -8Q372 10 309 10ZM168 -312H421Q414 -343 395.5 -366.5Q377 -390 351.5 -403.5Q326 -417 295 -417Q264 -417 238 -404Q212 -391 194 -367.5Q176 -344 168 -312Z"/><path transform="translate(1175 2165.5)" d="M54 0V-521H191V-479Q251 -531 337 -531Q398 -531 444.5 -505Q491 -479 517 -432Q543 -385 543 -323V0H406V-303Q406 -354 377 -383.5Q348 -413 298 -413Q263 -413 236.5 -399.5Q210 -386 191 -361V0Z"/><path transform="translate(1744 2165.5)" d="M295 7Q221 7 160.5 -28.5Q100 -64 65 -125Q30 -186 30 -261Q30 -336 65.5 -396.5Q101 -457 162 -492.5Q223 -528 299 -528Q337 -528 373.5 -517.5Q410 -507 441 -487V-700L578 -723V0H443V-43Q379 7 295 7ZM317 -110Q355 -110 386.5 -123Q418 -136 441 -160V-363Q418 -386 386 -399Q354 -412 317 -412Q274 -412 239.5 -392.5Q205 -373 185 -338.5Q165 -304 165 -261Q165 -218 185 -184Q205 -150 240 -130Q275 -110 317 -110Z"/><path transform="translate(2351 2165.5)" d="M220 9Q164 9 121 -11.5Q78 -32 54 -68Q30 -104 30 -151Q30 -226 86.5 -267.5Q143 -309 242 -309Q310 -309 370 -288V-326Q370 -371 342 -393.5Q314 -416 260 -416Q227 -416 189 -406Q151 -396 101 -374L51 -475Q113 -504 169.5 -517.5Q226 -531 283 -531Q389 -531 447 -480.5Q505 -430 505 -338V0H370V-37Q338 -13 301 -2Q264 9 220 9ZM160 -154Q160 -124 186 -106.5Q212 -89 256 -89Q289 -89 318 -97.5Q347 -106 370 -124V-199Q345 -209 318 -214Q291 -219 260 -219Q213 -219 186.5 -201.5Q160 -184 160 -154Z"/><path transform="translate(-8.6 2466.5) scale(0.2)" d="M407 11Q331 11 264.5 -16.5Q198 -44 148 -93.5Q98 -143 70.5 -208.5Q43 -274 43 -350Q43 -426 70.5 -491.5Q98 -557 148 -606.5Q198 -656 264.5 -683.5Q331 -711 407 -711Q463 -711 514 -697Q565 -683 609 -657Q653 -631 687 -593L627 -531Q587 -578 529 -603Q471 -628 407 -628Q349 -628 299 -607Q249 -586 212 -548Q175 -510 154.5 -460Q134 -410 134 -350Q134 -291 154.5 -240.5Q175 -190 212.5 -152Q250 -114 300.5 -93Q351 -72 410 -72Q473 -72 530 -97Q587 -122 626 -167L685 -107Q650 -70 606 -43.5Q562 -17 511.5 -3Q461 11 407 11Z"/><path transform="translate(300.84 2466.5) scale(0.2)" d="M405 11Q329 11 263 -16.5Q197 -44 147.5 -93.5Q98 -143 70.5 -208.5Q43 -274 43 -350Q43 -426 70.5 -491.5Q98 -557 147.5 -606.5Q197 -656 263 -683.5Q329 -711 405 -711Q481 -711 546.5 -683.5Q612 -656 662 -606.5Q712 -557 739.5 -491.5Q767 -426 767 -350Q767 -274 739.5 -208.5Q712 -143 662 -93.5Q612 -44 546.5 -16.5Q481 11 405 11ZM405 -72Q463 -72 512 -93Q561 -114 597.5 -152Q634 -190 655 -240.5Q676 -291 676 -350Q676 -410 655 -460Q634 -510 597.5 -548Q561 -586 512 -607Q463 -628 405 -628Q348 -628 298.5 -607Q249 -586 212 -548Q175 -510 154.5 -460Q134 -410 134 -350Q134 -291 154.5 -240.5Q175 -190 212 -152Q249 -114 298.5 -93Q348 -72 405 -72Z"/><path transform="translate(631.09 2466.5) scale(0.2)" d="M74 0V-700H163L570 -154V-700H655V0H576L160 -561V0Z"/><path transform="translate(945.13 2466.5) scale(0.2)" d="M306 10Q222 10 145 -23Q68 -56 10 -118L67 -181Q122 -124 182.5 -96Q243 -68 310 -68Q363 -68 403.5 -84Q444 -100 467 -129.5Q490 -159 490 -196Q490 -247 454.5 -274Q419 -301 337 -314L229 -332Q130 -349 82.5 -393Q35 -437 35 -511Q35 -570 66.5 -615Q98 -660 154.5 -684.5Q211 -709 286 -709Q361 -709 433.5 -684.5Q506 -660 565 -615L514 -546Q400 -633 282 -633Q234 -633 198 -618.5Q162 -604 142 -578.5Q122 -553 122 -518Q122 -472 153 -447.5Q184 -423 256 -412L362 -395Q475 -376 527 -330Q579 -284 579 -202Q579 -139 544.5 -91Q510 -43 448.5 -16.5Q387 10 306 10Z"/><path transform="translate(1234.58 2466.5) scale(0.2)" d="M354 11Q264 11 198 -26.5Q132 -64 96.5 -133.5Q61 -203 61 -297V-700H151V-297Q151 -229 176 -178Q201 -127 247 -99.5Q293 -72 354 -72Q416 -72 461.5 -99.5Q507 -127 532 -178Q557 -229 557 -297V-700H647V-297Q647 -203 611 -134Q575 -65 509.5 -27Q444 11 354 11Z"/><path transform="translate(1544.42 2466.5) scale(0.2)" d="M74 0V-700H164V-80H575V0Z"/><path transform="translate(1804.47 2466.5) scale(0.2)" d="M267 0V-620H17V-700H607V-620H357V0Z"/><path transform="translate(2087.71 2466.5) scale(0.2)" d="M405 11Q329 11 263 -16.5Q197 -44 147.5 -93.5Q98 -143 70.5 -208.5Q43 -274 43 -350Q43 -426 70.5 -491.5Q98 -557 147.5 -606.5Q197 -656 263 -683.5Q329 -711 405 -711Q481 -711 546.5 -683.5Q612 -656 662 -606.5Q712 -557 739.5 -491.5Q767 -426 767 -350Q767 -274 739.5 -208.5Q712 -143 662 -93.5Q612 -44 546.5 -16.5Q481 11 405 11ZM405 -72Q463 -72 512 -93Q561 -114 597.5 -152Q634 -190 655 -240.5Q676 -291 676 -350Q676 -410 655 -460Q634 -510 597.5 -548Q561 -586 512 -607Q463 -628 405 -628Q348 -628 298.5 -607Q249 -586 212 -548Q175 -510 154.5 -460Q134 -410 134 -350Q134 -291 154.5 -240.5Q175 -190 212 -152Q249 -114 298.5 -93Q348 -72 405 -72Z"/><path transform="translate(2417.96 2466.5) scale(0.2)" d="M74 0V-700H382Q452 -700 503.5 -674.5Q555 -649 584 -603.5Q613 -558 613 -496Q613 -427 573 -377.5Q533 -328 466 -307L623 0H523L376 -295H164V0ZM164 -370H376Q443 -370 483 -404Q523 -438 523 -496Q523 -552 483 -586Q443 -620 376 -620H164Z"/><path transform="translate(2718.6 2466.5) scale(0.2)" d="M3 0 292 -700H399L687 0H589L504 -213H182L96 0ZM212 -289H474L343 -616Z"/></g></svg>
+        <div id="cta-btn">Comentá PAUTA</div>
+        <div class="block eyebrow center" style="top:1360px">y te paso el paso a paso · Seguinos</div>
+      </div>
+      <!-- VOZ -->
+    </div>
+
+    <script>
+      function splitWords(el) {
+        [...el.childNodes].forEach((node) => {
+          if (node.nodeType === 3) {
+            const frag = document.createDocumentFragment();
+            node.textContent.split(/(\s+)/).forEach((part) => {
+              if (!part) return;
+              if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+              const sp = document.createElement("span"); sp.className = "wd"; sp.textContent = part; frag.appendChild(sp);
+            });
+            node.replaceWith(frag);
+          } else if (node.nodeType === 1 && node.tagName !== "BR") splitWords(node);
+        });
+      }
+      document.querySelectorAll(".block.h, .block.eyebrow").forEach(splitWords);
+
+      const tl = gsap.timeline({ paused: true });
+      const K = 1;                       // se ajusta cuando llegue la voz (p. ej. 1/1.2)
+      const at = (t) => t * K, d = (x) => x * K;
+      const pop = (sel, t, st = 0.08) => tl.fromTo(sel, { opacity: 0, y: 70, scale: 0.75, rotation: -4, filter: "blur(10px)" },
+        { opacity: 1, y: 0, scale: 1, rotation: 0, filter: "blur(0px)", duration: d(0.42), stagger: d(st), ease: "back.out(1.9)" }, at(t));
+      const punch = (sel, t) => tl.fromTo(sel, { scale: 1 }, { scale: 1.14, duration: d(0.16), yoyo: true, repeat: 1, ease: "power2.out" }, at(t));
+      const out = (sel, t) => tl.to(sel, { opacity: 0, y: -60, filter: "blur(8px)", duration: d(0.22), ease: "power2.in" }, at(t));
+      const drift = (sel, t0, t1) => tl.fromTo(sel, { scale: 1 }, { scale: 1.04, duration: d(t1 - t0), ease: "none" }, at(t0));
+
+      // 1 · tablero que se da vuelta + gancho
+      drift("#s1", 0, 3.2);
+      tl.fromTo("#board div", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: d(0.25), stagger: d(0.02), ease: "back.out(2)" }, at(0));
+      pop("#s1 .h .wd", 0.1, 0.07);
+      tl.to("#board", { rotation: 180, duration: d(0.7), ease: "back.inOut(1.6)" }, at(1.0));
+      tl.to("#board div", { scale: (i) => [0.6, 1, 0.8, 1, 1, 0.7, 1, 0.9, 0.8, 1, 0.6, 1, 1, 0.8, 1, 0.7][i], rotation: (i) => (i % 2 ? 20 : -20), duration: d(0.5), ease: "power2.out" }, at(1.5));
+      punch("#s1 .h .o", 1.8);
+      pop("#s1 .eyebrow .wd", 1.9, 0.06);
+      out("#s1", 2.95);
+
+      // 2 · Meta Ads 🤝 ChatGPT
+      drift("#s2", 3.2, 8.2);
+      pop("#s2 .eyebrow .wd", 3.25, 0.05);
+      pop("#s2 .lg .wd", 3.6);
+      tl.fromTo("#p-meta", { x: -500, opacity: 0 }, { x: 0, opacity: 1, duration: d(0.45), ease: "back.out(1.6)" }, at(3.9));
+      tl.fromTo("#p-gpt", { x: 500, opacity: 0 }, { x: 0, opacity: 1, duration: d(0.45), ease: "back.out(1.6)" }, at(4.05));
+      tl.fromTo("#link", { scaleX: 0 }, { scaleX: 1, duration: d(0.3), ease: "power2.out" }, at(4.5));
+      tl.fromTo("#knot", { scale: 0 }, { scale: 1, duration: d(0.3), ease: "back.out(3)" }, at(4.75));
+      tl.to("#knot", { scale: 1.35, duration: d(0.18), yoyo: true, repeat: 3, ease: "power1.inOut" }, at(5.1));
+      pop("#s2 .md .wd", 5.6, 0.07);
+      punch("#s2 .md .o", 6.9);
+      out("#s2", 7.95);
+
+      // 3a · pedido → campaña armada
+      drift("#s3a", 8.2, 11.5);
+      pop("#s3a .h .wd", 8.25, 0.06);
+      tl.fromTo("#s3a .user", { opacity: 0, scale: 0.6, transformOrigin: "100% 100%" }, { opacity: 1, scale: 1, duration: d(0.35), ease: "back.out(2)" }, at(8.5));
+      tl.fromTo("#card", { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: d(0.4), ease: "power3.out" }, at(9.6));
+      tl.fromTo("#card .crow", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: d(0.25), stagger: d(0.15), ease: "power2.out" }, at(9.9));
+      punch("#s3a .h .o", 10.6);
+      out("#s3a", 11.25);
+
+      // 3b · ¿qué anuncio funciona? → gráfico → respuesta
+      tl.fromTo("#s3b .user", { opacity: 0, scale: 0.6, transformOrigin: "100% 100%" }, { opacity: 1, scale: 1, duration: d(0.3), ease: "back.out(2)" }, at(11.55));
+      tl.fromTo("#s3b .bars div", { scaleY: 0 }, { scaleY: 1, duration: d(0.4), stagger: d(0.08), ease: "back.out(1.5)" }, at(11.9));
+      tl.fromTo("#s3b .bars .hi", { scale: 1 }, { scaleX: 1.08, duration: d(0.2), yoyo: true, repeat: 1 }, at(12.7));
+      tl.fromTo("#s3b .bot", { opacity: 0, scale: 0.6, transformOrigin: "0% 100%" }, { opacity: 1, scale: 1, duration: d(0.3), ease: "back.out(2)" }, at(12.9));
+      out("#s3b", 13.95);
+
+      // 4 · el administrador se va, queda el chat
+      pop("#s4 .md .wd", 14.25, 0.06);
+      tl.from("#mgr", { opacity: 0, y: 60, duration: d(0.35), ease: "power3.out" }, at(14.4));
+      tl.from("#mini", { opacity: 0, scale: 0, duration: d(0.35), ease: "back.out(2.4)" }, at(15.5));
+      tl.to("#mgr", { scale: 0.15, opacity: 0, rotation: -12, duration: d(0.5), ease: "power3.in" }, at(15.9));
+      tl.to("#mini", { scale: 1.5, y: -60, duration: d(0.5), ease: "back.out(1.8)" }, at(16.2));
+      pop("#s4 .lg .wd", 16.6, 0.08);
+      punch("#s4 .lg .o", 17.4);
+      out("#s4", 17.95);
+
+      // 5 · pausado → activo
+      pop("#s5 .lg .wd", 18.25, 0.1);
+      pop("#s5 .md .wd", 19.6, 0.07);
+      tl.from("#sw, #swl", { opacity: 0, y: 40, duration: d(0.35), ease: "power3.out" }, at(18.5));
+      tl.to("#knob", { x: 280, duration: d(0.35), ease: "back.out(1.8)" }, at(20.4));
+      tl.to("#sw", { backgroundColor: "#075056", duration: d(0.3) }, at(20.4));
+      tl.to("#swl", { opacity: 0, duration: d(0.15) }, at(20.4));
+      tl.to("#swl2", { opacity: 1, duration: d(0.2) }, at(20.5));
+      out("#s5", 21.75);
+
+      // 6 · S → logo → CTA
+      tl.to("#sDraw", { attr: { "stroke-dashoffset": 0 }, duration: d(0.9), ease: "power2.inOut" }, at(22.0));
+      tl.from("#wordmark", { opacity: 0, y: 40, duration: d(0.45), ease: "power3.out" }, at(22.6));
+      tl.fromTo("#logo", { scale: 1 }, { scale: 1.04, duration: d(4.2), ease: "none" }, at(22.0));
+      tl.fromTo("#cta-btn", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: d(0.4), ease: "back.out(2.4)" }, at(22.4));
+      tl.to("#cta-btn", { scale: 1.08, duration: d(0.25), yoyo: true, repeat: 3, ease: "power1.inOut" }, at(23.2));
+      pop("#s6 .eyebrow .wd", 23.4, 0.06);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
