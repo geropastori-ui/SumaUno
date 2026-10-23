@@ -3,8 +3,35 @@
 - **Proyecto:** Senda Consultora
 - **Idea de origen:** ideas/2026-10-23-ia.md #18
 - **Estado:** BORRADOR
-- **Formato:** Reel 9:16, ~35 s a velocidad normal (~29 s si se acelera al 120 % como el #5). Voz en off de Gero + motion graphics con la marca. Sin rostro.
+- **Formato:** Reel 9:16, ~25 s a velocidad normal (~21 s al 120 %). Voz en off de Gero + motion graphics con la marca. Sin rostro.
 - **Objetivo / CTA:** retención + comentarios con PAUTA.
+
+## Versión 2 · más directa (pedido del usuario: "cambia el juego")
+Duración: ~25 s a velocidad normal (~21 s al 120 %). Sin vueltas: noticia → qué significa → regla → CTA.
+
+| # | Tiempo | Voz en off | Se ve (motion) | Texto en pantalla |
+|---|---|---|---|---|
+| 1 – Gancho | 0–3 s | "Esto **cambia las reglas del juego** de la publicidad." | Tablero de juego que se da vuelta de golpe | "Esto cambia las reglas del juego" |
+| 2 – La noticia | 3–8 s | "Meta conectó sus anuncios con ChatGPT. Ahora las campañas de Instagram se arman **conversando**." | Logo genérico de chat + ícono de anuncio que se unen con una línea | "Meta Ads 🤝 ChatGPT" |
+| 3 – Cómo es | 8–14 s | "Le pedís: 'campaña para mis viandas, diez mil pesos por día, en Santa Fe'… y la arma. Le preguntás qué anuncio funciona… y te lo dice." | Burbuja de chat → tarjeta de campaña que se arma (Objetivo · Presupuesto · Público) → gráfico con respuesta | "Le pedís la campaña. La arma." |
+| 4 – Qué significa | 14–18 s | "Pautar ya no es saber usar el Administrador de anuncios: es saber **qué pedirle**." | El Administrador de anuncios se achica y se va; queda solo la burbuja de chat | "Ya no gana el que sabe configurar. Gana el que sabe **pedir**." |
+| 5 – Regla | 18–22 s | "Eso sí: que lo arme todo en pausa… y lo activás vos." | Interruptor "Pausado" → mano que lo activa | "En **pausa**. Lo activás **vos**." |
+| 6 – CTA | 22–25 s | "Comentá PAUTA y te paso el paso a paso." | Cierre fijo: la S se dibuja → logo | "Comentá **PAUTA**" |
+
+### Ganchos alternativos (todos directos, mismo concepto)
+1. "Esto **cambia las reglas del juego** de la publicidad." *(principal)*
+2. "La publicidad en Instagram acaba de cambiar para siempre."
+3. "Meta acaba de cambiar el juego: ahora pautás hablando con ChatGPT."
+
+## Texto corrido (para grabar)
+> Esto cambia las reglas del juego de la publicidad.
+> Meta conectó sus anuncios con ChatGPT. Ahora las campañas de Instagram se arman conversando.
+> Le pedís: "campaña para mis viandas, diez mil pesos por día, en Santa Fe"… y la arma. Le preguntás qué anuncio funciona… y te lo dice.
+> Pautar ya no es saber usar el Administrador de anuncios: es saber qué pedirle.
+> Eso sí: que lo arme todo en pausa… y lo activás vos.
+> Comentá PAUTA y te paso el paso a paso.
+
+<details><summary>Versión 1 (descartada: muy larga)</summary>
 
 ## Estructura de retención
 | Bloque | Función |
@@ -41,10 +68,15 @@
 > El error: dejar que la IA gaste sola. Si le pedís un cambio de presupuesto, se aplica de verdad. La regla: que lo arme todo en pausa… y lo activás vos.
 > Comentá PAUTA y te paso cómo conectarlo paso a paso. Y seguinos, que esto cambia todas las semanas.
 
+
+</details>
+
 ## Caption
 La pauta ya no se configura: se conversa 🤖
 
-Meta conectó su sistema de anuncios con ChatGPT y Claude (beta abierta desde abril de 2026). Le pedís una campaña, te la arma; le preguntás qué anuncio funciona, te lo explica.
+Esto cambia las reglas del juego: Meta conectó su sistema de anuncios con ChatGPT y Claude (beta abierta desde abril de 2026). Le pedís una campaña, te la arma; le preguntás qué anuncio funciona, te lo explica.
+
+Ya no gana el que sabe configurar. Gana el que sabe pedir.
 
 Pero ojo: lo que le pidas se ejecuta de verdad. Que arme todo en pausa y lo activás vos ✅
 
