@@ -8,7 +8,7 @@
 ## Slides (8)
 1. **Gancho:** "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?" + ilustración: "Tu pyme" al final de un recorrido en zigzag con signos de pregunta.
 2. **01 · La diferencia:** Empujar (más horas, más ventas, el mismo caos) vs. Avanzar (saber hacia dónde, con qué recursos y cómo llegar). "No hace falta empujar más fuerte. Hace falta saber hacia dónde."
-3. **02 · El nombre:** "senda · sustantivo femenino: camino angosto que se va abriendo con el paso de quienes lo recorren" (definición propia). "Un camino así no aparece solo: se abre caminando." + sendero ilustrado que termina en la S.
+3. **02 · El nombre:** "senda · sustantivo femenino: camino angosto que se va abriendo con el paso de quienes lo recorren" (definición propia). "Un camino así no aparece solo: se abre caminando.".
 4. **03 · Para pensar:** "Preguntas que toda pyme tiene que poder responder" (estrategia, finanzas, factibilidad, mercado, datos, procesos). "Si dudaste en más de una: ahí está el punto de partida."
 5. **04 · Nuestro logo:** la S como camino que dobla: tramo 1 (dónde estás hoy), el giro (cambio de rumbo), tramo 2 (hacia dónde **vamos**, en naranja: lo caminamos juntos). "Ahí estamos."
 6. **05 · Cómo trabajamos:** "Así trabajamos, en 3 pasos": Diagnóstico (gratis) → Plan → Acompañamiento.
