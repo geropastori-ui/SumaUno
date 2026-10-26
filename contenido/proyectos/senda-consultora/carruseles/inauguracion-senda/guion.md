@@ -13,11 +13,11 @@
 5. **04 · Nuestro logo:** la S como camino que dobla: tramo 1 (dónde estás hoy), el giro (cambio de rumbo), tramo 2 (hacia dónde **vamos**, en naranja: lo caminamos juntos). "Ahí estamos."
 6. **05 · Cómo trabajamos:** "Así trabajamos, en 3 pasos": Diagnóstico (gratis) → Plan → Acompañamiento.
 7. **06 · Áreas de trabajo (tono formal):** IA aplicada · Ingeniería de datos · Gestión financiera · Factibilidad de proyectos · Relevamiento de mercado · Procesos · Marketing.
-8. **Cierre:** "Crecer no es correr más. Es tener un camino claro." + logo + botón "Reservá tu diagnóstico gratuito" + "Seguinos" (sin la S de la esquina).
+8. **Cierre:** "Crecer no es correr más. Es tener un camino claro." + logo + botón "Reservá tu diagnóstico gratuito" + "Seguinos en @senda.consultora" (sin la S de la esquina).
 
 ## Links para reservar (completar antes de publicar)
 - `[LINK_AGENDA]` → página de reservas de Google Calendar ("Agenda de citas"), p. ej. `https://calendar.app.google/XXXX`.
-- `[LINK_DM_IG]` → mensaje directo de Instagram: `https://ig.me/m/[USUARIO]`.
+- Mensaje directo de Instagram: `https://ig.me/m/senda.consultora` (usuario: @senda.consultora).
 - `[LINK_WA]` (opcional) → WhatsApp: `https://wa.me/549XXXXXXXXXX?text=Hola%20Senda%2C%20quiero%20reservar%20mi%20diagn%C3%B3stico%20gratuito`.
 
 Dónde van: **bio de Instagram** (link o lista de links), **historia del día con sticker de enlace**, **respuesta automática a quien escriba "DIAGNÓSTICO"**, y **dentro del texto del posteo en LinkedIn** (ahí sí son clickeables).
@@ -72,5 +72,5 @@ Y te pregunto: ¿cuál es hoy el mayor freno para crecer en tu empresa?
 ## Cómo publicarlo
 - **Instagram:** subir las 8 PNG como carrusel en orden. Fijarlo en el perfil junto al reel "Por qué existe Senda".
 - **LinkedIn:** "Crear publicación" → "Agregar documento" → subir el PDF y ponerle título ("Senda Consultora: el nombre no es casualidad"). Si publicás desde la página y desde tu perfil, hacelo desde la página y compartilo desde tu perfil con la opción B.
-- **Pendiente:** usuario de Instagram/LinkedIn y los links de reserva (`[LINK_AGENDA]`, `[LINK_DM_IG]`).
+- **Pendiente:** link de reserva de Google Calendar (`[LINK_AGENDA]`).
 - **Nota:** en LinkedIn los links dentro del PDF no suelen ser clickeables; el link va en el texto del posteo.

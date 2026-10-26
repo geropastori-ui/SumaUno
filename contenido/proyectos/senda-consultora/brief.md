@@ -7,7 +7,7 @@
 - **Propuesta de valor (en una frase):** [DATO — propuesta inicial: "Ordenamos tu pyme para que crezca sin depender de vos."]
 - **Etapa:** Lanzamiento. Cuenta de Instagram nueva (arranca de cero).
 - **Posicionamiento honesto:** el fundador **no tiene experiencia comprobable previa** con pymes ni en consultoría. No afirmar trayectoria, años, casos ni resultados. Senda se presenta como un proyecto que arranca y **propone acompañar** ("te acompaño", "lo vemos juntos"), con contenido útil que demuestre criterio.
-- **Links:** [DATO: Instagram, web, WhatsApp]
+- **Links:** Instagram @senda.consultora (DM: https://ig.me/m/senda.consultora) · [DATO: link de reservas de Google Calendar, web, WhatsApp]
 
 ## Objetivo del contenido
 - **Objetivo principal:** Generar clientes (consultas y reuniones de diagnóstico).
