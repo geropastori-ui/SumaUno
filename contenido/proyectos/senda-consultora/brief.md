@@ -2,6 +2,7 @@
 
 ## Proyecto
 - **Qué es:** Consultora estratégica integral para pymes: estrategia de negocio, transformación digital e IA, marketing y comercial, gestión y operaciones.
+- **Servicios / temas (oct 2026):** IA aplicada · ingeniería de datos · finanzas · factibilidad de proyectos · relevamiento de mercado · procesos · marketing.
 - **Nombre:** Senda Consultora
 - **Propuesta de valor (en una frase):** [DATO — propuesta inicial: "Ordenamos tu pyme para que crezca sin depender de vos."]
 - **Etapa:** Lanzamiento. Cuenta de Instagram nueva (arranca de cero).
