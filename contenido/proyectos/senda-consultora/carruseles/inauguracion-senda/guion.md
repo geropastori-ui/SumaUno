@@ -13,7 +13,7 @@
 5. **04 · Qué hacemos:** los 4 tramos sobre un sendero en forma de S: Estrategia · Finanzas · Procesos · Marketing.
 6. **05 · Nuestro logo:** la S como camino que dobla: tramo 1 (dónde estás), el giro (cambio de rumbo), tramo 2 (hacia dónde vas).
 7. **06 · Cómo trabajamos:** Diagnóstico (gratis) → Plan → Acompañamiento.
-8. **07 · En esta cuenta:** IA aplicada · Ingeniería de datos · Finanzas simples · Factibilidad de proyectos · Relevamiento de mercado · Procesos · Marketing.
+8. **07 · Áreas de trabajo (tono formal):** IA aplicada · Ingeniería de datos · Gestión financiera · Factibilidad de proyectos · Relevamiento de mercado · Procesos · Marketing, cada una con una descripción técnica.
 9. **Cierre:** "Crecer no es correr más. Es tener un camino claro." + logo + botón "Reservá tu diagnóstico gratuito" + "Seguinos" en letra chica.
 
 ## Caption · Instagram
