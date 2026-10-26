@@ -6,7 +6,7 @@
 - **Regla del brief respetada:** sin experiencia previa, casos ni resultados; presentación honesta de un proyecto que arranca.
 
 ## Slides (8)
-1. **Gancho:** "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?" + ilustración: "Tu pyme" al final de un recorrido en zigzag con signos de pregunta.
+1. **Gancho (sin etiqueta de marca, para no anticipar):** "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?" + ilustración: "Tu pyme" al final de un recorrido en zigzag con signos de pregunta.
 2. **01 · La diferencia:** Empujar (más horas, vender más sin ganar más, el mismo caos) vs. Avanzar (saber hacia dónde, con qué recursos y cómo llegar). "No hace falta empujar más fuerte. Hace falta saber hacia dónde."
 3. **02 · El nombre:** "senda · sustantivo femenino: camino angosto que se va abriendo con el paso de quienes lo recorren" (definición propia). "Un camino así no aparece solo: se abre caminando.".
 4. **03 · Para pensar:** "Preguntas que toda pyme tiene que poder responder" (estrategia, finanzas, factibilidad, mercado, datos, procesos). "Si dudaste en más de una: ahí está el punto de partida."
