@@ -15,6 +15,7 @@
 - **Duración / modalidad del diagnóstico:** [DATO]
 
 ## Público
+- **Cambio (oct 2026):** la comunicación se dirige a **negocios y empresas** en general, no solo a pymes. Usar "negocio"/"empresa" en lugar de "pyme" en los contenidos nuevos.
 - **Quiénes son:** Dueños, socios y gerentes de pymes.
 - **Dolores / problemas:** Todo pasa por el dueño; crecen las ventas y no la rentabilidad; procesos en Excel y WhatsApp; no saben qué hacer con la IA; el equipo no tiene roles claros; marketing sin resultados medibles.
 - **Deseos / motivaciones:** Tener tiempo, previsibilidad y control de los números; crecer sin caos; delegar.

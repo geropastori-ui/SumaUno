@@ -5,24 +5,24 @@
 - **LinkedIn:** `senda-inauguracion-linkedin.pdf` (subir como documento).
 
 ## Texto para Instagram
-¿Sabés hacia dónde va tu pyme… o solo la estás empujando? 🧭
+¿Sabés hacia dónde va tu negocio… o solo lo estás empujando? 🧭
 
 Empujar es sumar horas, ventas y herramientas, y terminar con el mismo caos. Avanzar es saber hacia dónde vas, con qué contás y cómo llegar.
 
 Para eso hace falta un camino. Por eso nos llamamos Senda.
 
-Acompañamos a pymes en siete áreas: IA aplicada, ingeniería de datos, gestión financiera, factibilidad de proyectos, relevamiento de mercado, procesos y marketing.
+Acompañamos a negocios y empresas en siete áreas: IA aplicada, ingeniería de datos, gestión financiera, factibilidad de proyectos, relevamiento de mercado, procesos y marketing.
 
 👉 Deslizá para conocernos.
 📅 Reservá tu diagnóstico gratuito desde el link de la bio, o escribinos DIAGNÓSTICO por mensaje directo.
-➕ Seguinos para más contenido sobre cómo hacer crecer tu pyme.
+➕ Seguinos para más contenido sobre cómo hacer crecer tu negocio.
 
-#Pymes #Consultoría #Emprendedores #GestiónEmpresarial #SantaFe
+#Negocios #Consultoría #Emprendedores #GestiónEmpresarial #SantaFe
 
 ## Texto para LinkedIn · página de empresa
-¿Sabés hacia dónde va tu pyme… o solo la estás empujando?
+¿Sabés hacia dónde va tu negocio… o solo lo estás empujando?
 
-Muchas pymes crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, el caos sigue ahí. Todo pasa por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más.
+Muchos negocios crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, el caos sigue ahí. Todo pasa por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más.
 
 No hace falta empujar más fuerte. Hace falta saber hacia dónde.
 
@@ -34,22 +34,22 @@ Empezamos siempre con un diagnóstico gratuito para entender dónde está hoy la
 
 ¿Cuál es hoy el mayor freno para el crecimiento de tu empresa? Te leemos en los comentarios.
 
-#Pymes #Consultoría #Estrategia #TransformaciónDigital #Emprendimiento
+#Negocios #Empresas #Consultoría #Estrategia #TransformaciónDigital
 
 ## Texto para LinkedIn · perfil personal
 Hoy presento Senda Consultora.
 
-La pregunta que le da origen es simple: ¿sabés hacia dónde va tu pyme… o solo la estás empujando?
+La pregunta que le da origen es simple: ¿sabés hacia dónde va tu negocio… o solo lo estás empujando?
 
-Muchas pymes crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, todo sigue pasando por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más de caos.
+Muchos negocios crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, todo sigue pasando por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más de caos.
 
-Elegí el nombre Senda porque una senda es un camino que se abre andando. Esa es la propuesta: acompañar a pymes a ordenar su estrategia, sus datos, sus finanzas, sus procesos y su marketing, paso a paso y con un rumbo claro.
+Elegí el nombre Senda porque una senda es un camino que se abre andando. Esa es la propuesta: acompañar a negocios y empresas a ordenar su estrategia, sus datos, sus finanzas, sus procesos y su marketing, paso a paso y con un rumbo claro.
 
-Arrancamos siempre con un diagnóstico gratuito. Si tenés una pyme, o conocés a alguien que la tenga, podés reservarlo acá: [LINK_AGENDA]
+Arrancamos siempre con un diagnóstico gratuito. Si tenés un negocio, o conocés a alguien que lo tenga, podés reservarlo acá: [LINK_AGENDA]
 
 Y te pregunto: ¿cuál es hoy el mayor freno para crecer en tu empresa?
 
-#Pymes #Consultoría #Emprendimiento #Estrategia
+#Negocios #Consultoría #Emprendimiento #Estrategia
 
 ## Cómo publicar
 1. **Instagram:** nueva publicación → seleccionar las 8 imágenes en orden → pegar el texto → publicar. Después, fijarla en el perfil.

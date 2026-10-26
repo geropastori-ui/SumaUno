@@ -1,4 +1,4 @@
-# Carrusel de inauguración · "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?"
+# Carrusel de inauguración · "¿Sabés hacia dónde va tu negocio… o solo lo estás empujando?"
 
 - **Proyecto:** Senda Consultora
 - **Estado:** BORRADOR — para abrir Instagram y LinkedIn
@@ -6,10 +6,10 @@
 - **Regla del brief respetada:** sin experiencia previa, casos ni resultados; presentación honesta de un proyecto que arranca.
 
 ## Slides (8)
-1. **Gancho (sin etiqueta de marca, para no anticipar):** "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?" + ilustración: "Tu pyme" al final de un recorrido en zigzag con signos de pregunta.
+1. **Gancho (sin etiqueta de marca, para no anticipar):** "¿Sabés hacia dónde va tu negocio… o solo lo estás empujando?" + ilustración: "Tu negocio" al final de un recorrido en zigzag con signos de pregunta.
 2. **01 · La diferencia:** Empujar (más horas, vender más sin ganar más, el mismo caos) vs. Avanzar (saber hacia dónde, con qué recursos y cómo llegar). "No hace falta empujar más fuerte. Hace falta saber hacia dónde."
 3. **02 · El nombre:** "senda · sustantivo femenino: camino angosto que se va abriendo con el paso de quienes lo recorren" (definición propia). "Un camino así no aparece solo: se abre caminando.".
-4. **03 · Para pensar:** "Preguntas que toda pyme tiene que poder responder" (estrategia, finanzas, factibilidad, mercado, datos, procesos). "Si dudaste en más de una: ahí está el punto de partida."
+4. **03 · Para pensar:** "Preguntas que todo negocio tiene que poder responder" (estrategia, finanzas, factibilidad, mercado, datos, procesos). "Si dudaste en más de una: ahí está el punto de partida."
 5. **04 · Nuestro logo:** la S como camino que dobla: tramo 1 (dónde estás hoy), el giro (cambio de rumbo), tramo 2 (hacia dónde **vamos**, en naranja: lo caminamos juntos). "Ahí estamos."
 6. **05 · Cómo trabajamos:** "Así trabajamos, en 3 pasos": Diagnóstico (gratis) → Plan → Acompañamiento.
 7. **06 · Áreas de trabajo (tono formal):** IA aplicada · Ingeniería de datos · Gestión financiera · Factibilidad de proyectos · Relevamiento de mercado · Procesos · Marketing.
@@ -23,24 +23,24 @@
 Dónde van: **bio de Instagram** (link o lista de links), **historia del día con sticker de enlace**, **respuesta automática a quien escriba "DIAGNÓSTICO"**, y **dentro del texto del posteo en LinkedIn** (ahí sí son clickeables).
 
 ## Caption · Instagram
-¿Sabés hacia dónde va tu pyme… o solo la estás empujando? 🧭
+¿Sabés hacia dónde va tu negocio… o solo lo estás empujando? 🧭
 
 Empujar es sumar horas, ventas y herramientas, y terminar con el mismo caos. Avanzar es saber hacia dónde vas, con qué contás y cómo llegar.
 
 Para eso hace falta un camino. Por eso nos llamamos Senda.
 
-Acompañamos a pymes en siete áreas: IA aplicada, ingeniería de datos, gestión financiera, factibilidad de proyectos, relevamiento de mercado, procesos y marketing.
+Acompañamos a negocios y empresas en siete áreas: IA aplicada, ingeniería de datos, gestión financiera, factibilidad de proyectos, relevamiento de mercado, procesos y marketing.
 
 👉 Deslizá para conocernos.
 📅 Reservá tu diagnóstico gratuito desde el link de la bio, o escribinos DIAGNÓSTICO por mensaje directo.
-➕ Seguinos para más contenido sobre cómo hacer crecer tu pyme.
+➕ Seguinos para más contenido sobre cómo hacer crecer tu negocio.
 
-#Pymes #Consultoría #Emprendedores #GestiónEmpresarial #SantaFe
+#Negocios #Consultoría #Emprendedores #GestiónEmpresarial #SantaFe
 
 ## Texto · LinkedIn (opción A: página de empresa)
-¿Sabés hacia dónde va tu pyme… o solo la estás empujando?
+¿Sabés hacia dónde va tu negocio… o solo lo estás empujando?
 
-Muchas pymes crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, el caos sigue ahí. Todo pasa por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más.
+Muchos negocios crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, el caos sigue ahí. Todo pasa por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más.
 
 No hace falta empujar más fuerte. Hace falta saber hacia dónde.
 
@@ -52,22 +52,22 @@ Empezamos siempre con un diagnóstico gratuito para entender dónde está hoy la
 
 ¿Cuál es hoy el mayor freno para el crecimiento de tu empresa? Te leemos en los comentarios.
 
-#Pymes #Consultoría #Estrategia #TransformaciónDigital #Emprendimiento
+#Negocios #Empresas #Consultoría #Estrategia #TransformaciónDigital
 
 ## Texto · LinkedIn (opción B: perfil personal del fundador)
 Hoy presento Senda Consultora.
 
-La pregunta que le da origen es simple: ¿sabés hacia dónde va tu pyme… o solo la estás empujando?
+La pregunta que le da origen es simple: ¿sabés hacia dónde va tu negocio… o solo lo estás empujando?
 
-Muchas pymes crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, todo sigue pasando por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más de caos.
+Muchos negocios crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, todo sigue pasando por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más de caos.
 
-Elegí el nombre Senda porque una senda es un camino que se abre andando. Esa es la propuesta: acompañar a pymes a ordenar su estrategia, sus datos, sus finanzas, sus procesos y su marketing, paso a paso y con un rumbo claro.
+Elegí el nombre Senda porque una senda es un camino que se abre andando. Esa es la propuesta: acompañar a negocios y empresas a ordenar su estrategia, sus datos, sus finanzas, sus procesos y su marketing, paso a paso y con un rumbo claro.
 
-Arrancamos siempre con un diagnóstico gratuito. Si tenés una pyme, o conocés a alguien que la tenga, podés reservarlo acá: [LINK_AGENDA]
+Arrancamos siempre con un diagnóstico gratuito. Si tenés un negocio, o conocés a alguien que lo tenga, podés reservarlo acá: [LINK_AGENDA]
 
 Y te pregunto: ¿cuál es hoy el mayor freno para crecer en tu empresa?
 
-#Pymes #Consultoría #Emprendimiento #Estrategia
+#Negocios #Consultoría #Emprendimiento #Estrategia
 
 ## Cómo publicarlo
 - **Instagram:** subir las 8 PNG como carrusel en orden. Fijarlo en el perfil junto al reel "Por qué existe Senda".
