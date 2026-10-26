@@ -2,19 +2,18 @@
 
 - **Proyecto:** Senda Consultora
 - **Estado:** BORRADOR — para abrir Instagram y LinkedIn
-- **Formato:** 9 slides de 1080×1350 (`png/`) + PDF para LinkedIn (`senda-inauguracion-linkedin.pdf`). Regenerar: `node render.mjs`.
+- **Formato:** 8 slides de 1080×1350 (`png/`) + PDF para LinkedIn (`senda-inauguracion-linkedin.pdf`). Regenerar: `node render.mjs`.
 - **Regla del brief respetada:** sin experiencia previa, casos ni resultados; presentación honesta de un proyecto que arranca.
 
-## Slides
-1. **Gancho:** "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?" + ilustración: "Tu pyme" al final de un recorrido zigzagueante con signos de pregunta.
+## Slides (8)
+1. **Gancho:** "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?" + ilustración: "Tu pyme" al final de un recorrido en zigzag con signos de pregunta.
 2. **01 · La diferencia:** Empujar (más horas, más ventas, el mismo caos) vs. Avanzar (saber hacia dónde, con qué recursos y cómo llegar). "No hace falta empujar más fuerte. Hace falta saber hacia dónde."
-3. **02 · El nombre:** tarjeta de diccionario: "senda · sustantivo femenino: camino angosto que se va abriendo con el paso de quienes lo recorren." (definición propia, no se atribuye a la RAE porque no se pudo verificar el texto exacto). "Un camino así no aparece solo: se abre caminando."
-4. **03 · El punto de partida:** muchas pymes crecen a campo traviesa: todo pasa por el dueño · los números no están claros · cada herramienta suma caos. "No es falta de ganas. Es falta de camino."
-5. **04 · Para pensar:** "Preguntas que toda pyme tiene que poder responder" (6 preguntas: estrategia, finanzas, factibilidad, mercado, datos, procesos). "Si dudaste en más de una: ahí está el punto de partida."
-6. **05 · Nuestro logo:** la S como camino que dobla: tramo 1 (dónde estás), el giro (cambio de rumbo), tramo 2 (hacia dónde *vamos*, en naranja: lo caminamos juntos).
-7. **06 · Cómo trabajamos:** Diagnóstico (gratis) → Plan → Acompañamiento.
-8. **07 · Áreas de trabajo (tono formal):** IA aplicada · Ingeniería de datos · Gestión financiera · Factibilidad de proyectos · Relevamiento de mercado · Procesos · Marketing, cada una con una descripción técnica.
-9. **Cierre:** "Crecer no es correr más. Es tener un camino claro." + logo + botón "Reservá tu diagnóstico gratuito" + "Seguinos" en letra chica.
+3. **02 · El nombre:** "senda · sustantivo femenino: camino angosto que se va abriendo con el paso de quienes lo recorren" (definición propia). "Un camino así no aparece solo: se abre caminando." + sendero ilustrado que termina en la S.
+4. **03 · Para pensar:** "Preguntas que toda pyme tiene que poder responder" (estrategia, finanzas, factibilidad, mercado, datos, procesos). "Si dudaste en más de una: ahí está el punto de partida."
+5. **04 · Nuestro logo:** la S como camino que dobla: tramo 1 (dónde estás hoy), el giro (cambio de rumbo), tramo 2 (hacia dónde **vamos**, en naranja: lo caminamos juntos). "Ahí estamos."
+6. **05 · Cómo trabajamos:** "Así trabajamos, en 3 pasos": Diagnóstico (gratis) → Plan → Acompañamiento.
+7. **06 · Áreas de trabajo (tono formal):** IA aplicada · Ingeniería de datos · Gestión financiera · Factibilidad de proyectos · Relevamiento de mercado · Procesos · Marketing.
+8. **Cierre:** "Crecer no es correr más. Es tener un camino claro." + logo + botón "Reservá tu diagnóstico gratuito" + "Seguinos".
 
 ## Caption · Instagram
 ¿Sabés hacia dónde va tu pyme… o solo la estás empujando? 🧭
@@ -64,6 +63,6 @@ Y te pregunto: ¿cuál es hoy el mayor freno para crecer en tu empresa?
 #Pymes #Consultoría #Emprendimiento #Estrategia
 
 ## Cómo publicarlo
-- **Instagram:** subir las 9 PNG como carrusel en orden. Fijarlo en el perfil junto al reel "Por qué existe Senda".
+- **Instagram:** subir las 8 PNG como carrusel en orden. Fijarlo en el perfil junto al reel "Por qué existe Senda".
 - **LinkedIn:** "Crear publicación" → "Agregar documento" → subir el PDF y ponerle título ("Senda Consultora: el nombre no es casualidad"). Si publicás desde la página y desde tu perfil, hacelo desde la página y compartilo desde tu perfil con la opción B.
 - **Pendiente:** usuario de Instagram/LinkedIn para la última slide (por ahora dice solo "Seguinos").
