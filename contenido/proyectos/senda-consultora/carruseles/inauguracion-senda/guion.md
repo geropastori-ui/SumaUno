@@ -7,7 +7,7 @@
 
 ## Slides
 1. **Gancho:** "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?" + ilustración: "Tu pyme" al final de un recorrido zigzagueante con signos de pregunta.
-2. **01 · La diferencia:** Empujar (más horas, más ventas, el mismo caos) vs. Avanzar (saber hacia dónde, con qué recursos y cómo llegar). "Para avanzar hace falta un camino. Por eso nos llamamos Senda."
+2. **01 · La diferencia:** Empujar (más horas, más ventas, el mismo caos) vs. Avanzar (saber hacia dónde, con qué recursos y cómo llegar). "No hace falta empujar más fuerte. Hace falta saber hacia dónde."
 3. **02 · El nombre:** tarjeta de diccionario: "senda · sustantivo femenino: camino angosto que se va abriendo con el paso de quienes lo recorren." (definición propia, no se atribuye a la RAE porque no se pudo verificar el texto exacto). "Un camino así no aparece solo: se abre caminando."
 4. **03 · El punto de partida:** muchas pymes crecen a campo traviesa: todo pasa por el dueño · los números no están claros · cada herramienta suma caos. "No es falta de ganas. Es falta de camino."
 5. **04 · Para pensar:** "Preguntas que toda pyme tiene que poder responder" (6 preguntas: estrategia, finanzas, factibilidad, mercado, datos, procesos). "Si dudaste en más de una: ahí está el punto de partida."
