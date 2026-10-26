@@ -1,0 +1,69 @@
+# Carrusel de inauguración · "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?"
+
+- **Proyecto:** Senda Consultora
+- **Estado:** BORRADOR — para abrir Instagram y LinkedIn
+- **Formato:** 9 slides de 1080×1350 (`png/`) + PDF para LinkedIn (`senda-inauguracion-linkedin.pdf`). Regenerar: `node render.mjs`.
+- **Regla del brief respetada:** sin experiencia previa, casos ni resultados; presentación honesta de un proyecto que arranca.
+
+## Slides
+1. **Gancho:** "¿Sabés hacia dónde va tu pyme… o solo la estás empujando?" + ilustración: "Tu pyme" al final de un recorrido zigzagueante con signos de pregunta.
+2. **01 · La diferencia:** Empujar (más horas, más ventas, el mismo caos) vs. Avanzar (saber hacia dónde, con qué recursos y cómo llegar). "Para avanzar hace falta un camino. Por eso nos llamamos Senda."
+3. **02 · El nombre:** tarjeta de diccionario: "senda · sustantivo femenino: camino angosto que se va abriendo con el paso de quienes lo recorren." (definición propia, no se atribuye a la RAE porque no se pudo verificar el texto exacto). "Un camino así no aparece solo: se abre caminando."
+4. **03 · El punto de partida:** muchas pymes crecen a campo traviesa: todo pasa por el dueño · los números no están claros · cada herramienta suma caos. "No es falta de ganas. Es falta de camino."
+5. **04 · Qué hacemos:** los 4 tramos sobre un sendero en forma de S: Estrategia · Finanzas · Procesos · Marketing.
+6. **05 · Nuestro logo:** la S como camino que dobla: tramo 1 (dónde estás), el giro (cambio de rumbo), tramo 2 (hacia dónde vas).
+7. **06 · Cómo trabajamos:** Diagnóstico (gratis) → Plan → Acompañamiento.
+8. **07 · En esta cuenta:** IA aplicada · Finanzas simples · Procesos · Marketing.
+9. **Cierre:** "Crecer no es correr más. Es tener un camino claro." + logo + Seguinos + diagnóstico gratuito por mensaje.
+
+## Caption · Instagram
+¿Sabés hacia dónde va tu pyme… o solo la estás empujando? 🧭
+
+Empujar es sumar horas, ventas y herramientas, y terminar con el mismo caos. Avanzar es saber hacia dónde vas, con qué contás y cómo llegar.
+
+Para eso hace falta un camino. Por eso nos llamamos Senda.
+
+Acompañamos a pymes a ordenar su estrategia, sus finanzas, sus procesos y su marketing, paso a paso.
+
+👉 Deslizá para conocernos.
+📩 Si querés, arrancamos con un diagnóstico gratuito: escribinos por mensaje.
+➕ Seguinos: acá vas a encontrar IA aplicada, finanzas simples, procesos y marketing para pymes.
+
+#Pymes #Consultoría #Emprendedores #GestiónEmpresarial #SantaFe
+
+## Texto · LinkedIn (opción A: página de empresa)
+¿Sabés hacia dónde va tu pyme… o solo la estás empujando?
+
+Muchas pymes crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, el caos sigue ahí. Todo pasa por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más.
+
+No es falta de ganas. Es falta de camino.
+
+Por eso nace Senda Consultora. Una senda es un camino que se abre andando: paso a paso, con rumbo y sin atajos mágicos. Así trabajamos con cada pyme, en cuatro frentes: estrategia, finanzas, procesos y marketing.
+
+Empezamos siempre con un diagnóstico gratuito para entender dónde está hoy la empresa y por dónde conviene empezar.
+
+En esta página vamos a compartir contenido práctico sobre IA aplicada a pymes, finanzas, procesos y marketing.
+
+¿Cuál es hoy el mayor freno para el crecimiento de tu empresa? Te leemos en los comentarios.
+
+#Pymes #Consultoría #Estrategia #TransformaciónDigital #Emprendimiento
+
+## Texto · LinkedIn (opción B: perfil personal del fundador)
+Hoy presento Senda Consultora, un proyecto que vengo construyendo hace tiempo.
+
+La pregunta que le da origen es simple: ¿sabés hacia dónde va tu pyme… o solo la estás empujando?
+
+Muchas pymes crecen a fuerza de esfuerzo: más horas, más ventas, más herramientas. Y aun así, todo sigue pasando por el dueño, los números no terminan de estar claros y cada sistema nuevo suma una capa más de caos.
+
+Elegí el nombre Senda porque una senda es un camino que se abre andando. Esa es la propuesta: acompañar a pymes a ordenar su estrategia, sus finanzas, sus procesos y su marketing, paso a paso y con rumbo claro.
+
+Arrancamos siempre con un diagnóstico gratuito. Si tenés una pyme, o conocés a alguien que la tenga, escribime.
+
+Y te pregunto: ¿cuál es hoy el mayor freno para crecer en tu empresa?
+
+#Pymes #Consultoría #Emprendimiento #Estrategia
+
+## Cómo publicarlo
+- **Instagram:** subir las 9 PNG como carrusel en orden. Fijarlo en el perfil junto al reel "Por qué existe Senda".
+- **LinkedIn:** "Crear publicación" → "Agregar documento" → subir el PDF y ponerle título ("Senda Consultora: el nombre no es casualidad"). Si publicás desde la página y desde tu perfil, hacelo desde la página y compartilo desde tu perfil con la opción B.
+- **Pendiente:** usuario de Instagram/LinkedIn para la última slide (por ahora dice solo "Seguinos").
