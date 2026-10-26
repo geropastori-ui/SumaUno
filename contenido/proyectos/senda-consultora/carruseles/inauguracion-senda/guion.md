@@ -14,7 +14,7 @@
 6. **05 · Nuestro logo:** la S como camino que dobla: tramo 1 (dónde estás), el giro (cambio de rumbo), tramo 2 (hacia dónde vas).
 7. **06 · Cómo trabajamos:** Diagnóstico (gratis) → Plan → Acompañamiento.
 8. **07 · En esta cuenta:** IA aplicada · Finanzas simples · Procesos · Marketing.
-9. **Cierre:** "Crecer no es correr más. Es tener un camino claro." + logo + Seguinos + diagnóstico gratuito por mensaje.
+9. **Cierre:** "Crecer no es correr más. Es tener un camino claro." + logo + botón "Reservá tu diagnóstico gratuito" + "Seguinos" en letra chica.
 
 ## Caption · Instagram
 ¿Sabés hacia dónde va tu pyme… o solo la estás empujando? 🧭
